@@ -11,6 +11,8 @@
 #import "Node.h"
 @interface Node (Methods)
 
++(Node*)newObjectForID:(int)idValue;
++(Node*)newObjectFromDictionary:(NSDictionary*)data;
 +(Node*)createLocal;
 
 -(void)setup;

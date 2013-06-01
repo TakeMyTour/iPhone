@@ -7,16 +7,18 @@
 //
 
 #import "Node.h"
+#import "Image.h"
 #import "Tour.h"
 
 
 @implementation Node
 
-@dynamic name;
+@dynamic address;
 @dynamic description_text;
 @dynamic gps_latitude;
 @dynamic gps_longitude;
-@dynamic address;
+@dynamic name;
 @dynamic nodes_inverse;
+@dynamic images;
 
 @end

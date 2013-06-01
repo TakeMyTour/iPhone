@@ -21,7 +21,7 @@
     return toRet;
 }
 
-+(Tour*)newObjectForID:(int)idValue
++(Tour*)newObjectFromID:(int)idValue
 {
     NSManagedObjectContext *moc = [DataManager mainContext];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Tour" inManagedObjectContext:moc];
@@ -50,7 +50,7 @@
 
 +(Tour*)newObjectFromDictionary:(NSDictionary*)data
 {
-    Tour* item = [self newObjectForID:[[data objectForKey:@"id"] intValue]];
+    Tour* item = [self newObjectFromID:[[data objectForKey:@"id"] intValue]];
     item.name = [data objectForKey:@"name"];
     NSString* type = [data objectForKey:@"type"];
     if ([type isEqualToString:@"p"])
@@ -68,6 +68,19 @@
 -(void)setupFromDictionary:(NSDictionary*)data
 {
     // this is for pulling down extended data like nodes of the path, etc.
+    //self.name = [data objectForKey:@"name"];
+    NSArray* nodes = [data objectForKey:@"nodes"];
+    if (nodes)
+    {
+        NSMutableArray* new_node_list = [[NSMutableArray alloc] initWithCapacity:nodes.count];
+        for (NSDictionary* node_data in nodes)
+        {
+            Node* node = [Node newObjectFromDictionary:node_data];
+            [new_node_list addObject:node];
+        }
+        self.nodes = [NSOrderedSet orderedSetWithArray:new_node_list];
+        [new_node_list release];
+    }
 }
 
 -(void)setup

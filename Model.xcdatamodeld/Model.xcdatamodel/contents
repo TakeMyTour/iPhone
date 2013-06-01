@@ -3,12 +3,18 @@
     <entity name="BaseObject" representedClassName="BaseObject" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="Image" representedClassName="Image" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="images_node_inv" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="images" inverseEntity="Node" syncable="YES"/>
+    </entity>
     <entity name="Node" representedClassName="Node" parentEntity="BaseObject" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="description_text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gps_latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="gps_longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Image" inverseName="images_node_inv" inverseEntity="Image" syncable="YES"/>
         <relationship name="nodes_inverse" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Tour" inverseName="nodes" inverseEntity="Tour" syncable="YES"/>
     </entity>
     <entity name="Options" representedClassName="Options" parentEntity="BaseObject" syncable="YES">
@@ -24,10 +30,11 @@
         <relationship name="tours" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tour" inverseName="tours_user_inverse" inverseEntity="Tour" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Tour" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="Node" positionX="160" positionY="192" width="128" height="135"/>
-        <element name="Options" positionX="160" positionY="192" width="128" height="60"/>
         <element name="BaseObject" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Node" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="Options" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Tour" positionX="160" positionY="192" width="128" height="105"/>
         <element name="User" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Image" positionX="160" positionY="192" width="128" height="90"/>
     </elements>
 </model>

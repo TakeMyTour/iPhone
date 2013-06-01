@@ -12,6 +12,13 @@
 
 @implementation Node(Methods)
 
++(Node*)newObjectFromID:(int)idValue
+{
+    Node* toRet = nil;
+    
+}
+
+
 
 +(Node*)createLocal
 {
@@ -21,10 +28,61 @@
     return toRet;
 }
 
++(Node*)newObjectForID:(int)idValue
+{
+    NSManagedObjectContext *moc = [DataManager mainContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Node" inManagedObjectContext:moc];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"id = %d", idValue];
+    [request setPredicate:predicate];
+    NSError* error = nil;
+    
+    
+    NSArray *array = [moc executeFetchRequest:request error:&error];
+    if (array.count==0)
+    {
+        // make one
+        Node* toRet = [[Node alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:moc];
+        toRet.id = [NSNumber numberWithInt:idValue];
+        return toRet;
+    }
+    else
+    {
+        return [[array lastObject] retain];
+    }
+}
+
++(NSArray*)imagesFromImageList:(NSArray*)image_list
+{
+    NSMutableArray* toRet = [[NSMutableArray alloc] init];
+    for (NSDictionary* data in image_list)
+    {
+        Image* image = [Image createLocal];
+        image.url = [data objectForKey:@"url"];
+        image.desc = [data objectForKey:@"description"];
+        
+        [toRet addObject:image];
+    }
+    return toRet;
+}
+
++(Node*)newObjectFromDictionary:(NSDictionary*)data
+{
+    Node* item = [self newObjectForID:[[data objectForKey:@"id"] intValue]];
+    item.nodes_inverse = [Tour newObjectFromID:[[data objectForKey:@"tour_id"] intValue]];
+    item.name = [data objectForKey:@"name"];
+    item.address = [data objectForKey:@"address"];
+    item.description_text = [data objectForKey:@"desc"];
+    item.images = [NSSet setWithArray:[self imagesFromImageList:[data objectForKey:@"images"]]];
+    return item;
+}
+
+
 -(void)setup
 {
-    NSMutableArray* images = [[NSMutableArray alloc] init];
-   // _images = images;
 }
 
 -(id)init

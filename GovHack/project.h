@@ -29,6 +29,8 @@
 #import "BaseObject.h"
 #import "User.h"
 
+#import "Image.h"
+
 
 #pragma mark - Statics
 
@@ -44,6 +46,7 @@
 #import "Node+Methods.h"
 #import "BaseObject+Methods.h"
 #import "User+Methods.h"
+#import "Image+Methods.h"
 
 
 #pragma mark - Frameworks

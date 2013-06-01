@@ -20,6 +20,7 @@ typedef enum
 @interface Tour (Methods)
 
 +(Tour*)createLocal;
++(Tour*)newObjectFromID:(int)idValue;
 +(Tour*)newObjectFromDictionary:(NSDictionary*)data;
 
 -(void)setupFromDictionary:(NSDictionary*)data;
