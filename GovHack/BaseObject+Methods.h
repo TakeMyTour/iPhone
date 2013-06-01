@@ -1,0 +1,16 @@
+//
+//  BaseObject+initFromDictionary.h
+//  GovHack
+//
+//  Created by Myles on 1/06/13.
+//  Copyright (c) 2013 Myles. All rights reserved.
+//
+
+#import "BaseObject.h"
+
+@interface BaseObject (Methods)
+
+-(void)initFromDictionary:(NSDictionary*)dictionary;
+
+
+@end

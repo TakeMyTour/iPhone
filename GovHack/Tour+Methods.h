@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import "Tour.h"
 
 typedef enum
 {
@@ -16,15 +17,17 @@ typedef enum
 } TourType;
 
 
-@interface Tour : NSObject
+@interface Tour (Methods)
 
++(Tour*)createLocal;
++(Tour*)newObjectFromDictionary:(NSDictionary*)data;
+
+-(void)setupFromDictionary:(NSDictionary*)data;
+
+-(void)setup;
 -(id)init;
 -(id)init:(NSString*)name tour_type:(int)type;
 -(id)initFromDictionary:(NSDictionary*)dictionary;
 -(void)addToMap:(MKMapView*)map;
 
-@property (copy, nonatomic) NSString* name;
-@property (assign, nonatomic) id id;
-@property (assign, nonatomic) int tour_type;
-@property (retain, nonatomic) NSMutableArray* nodes;
 @end

@@ -34,15 +34,15 @@
 				<string key="IBProxiedObjectIdentifier">IBFirstResponder</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUIView" id="485328262">
+			<object class="IBUIView" id="895469559">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUITableView" id="870717984">
-						<reference key="NSNextResponder" ref="485328262"/>
+					<object class="IBUITableView" id="637191008">
+						<reference key="NSNextResponder" ref="895469559"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{0, 58}, {320, 422}}</string>
-						<reference key="NSSuperview" ref="485328262"/>
+						<reference key="NSSuperview" ref="895469559"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -60,13 +60,13 @@
 						<float key="IBUISectionHeaderHeight">22</float>
 						<float key="IBUISectionFooterHeight">22</float>
 					</object>
-					<object class="IBUITextField" id="993417086">
-						<reference key="NSNextResponder" ref="485328262"/>
+					<object class="IBUITextField" id="10127211">
+						<reference key="NSNextResponder" ref="895469559"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{17, 14}, {136, 30}}</string>
-						<reference key="NSSuperview" ref="485328262"/>
+						<reference key="NSSuperview" ref="895469559"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="825328598"/>
+						<reference key="NSNextKeyView" ref="739864660"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -96,13 +96,13 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUILabel" id="825328598">
-						<reference key="NSNextResponder" ref="485328262"/>
+					<object class="IBUILabel" id="739864660">
+						<reference key="NSNextResponder" ref="895469559"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{193, 18}, {42, 21}}</string>
-						<reference key="NSSuperview" ref="485328262"/>
+						<reference key="NSSuperview" ref="895469559"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="82170114"/>
+						<reference key="NSNextKeyView" ref="308285336"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -129,13 +129,13 @@
 						</object>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
-					<object class="IBUISwitch" id="82170114">
-						<reference key="NSNextResponder" ref="485328262"/>
+					<object class="IBUISwitch" id="308285336">
+						<reference key="NSNextResponder" ref="895469559"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{221, 15}, {94, 27}}</string>
-						<reference key="NSSuperview" ref="485328262"/>
+						<reference key="NSSuperview" ref="895469559"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="870717984"/>
+						<reference key="NSNextKeyView" ref="637191008"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -147,7 +147,7 @@
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="993417086"/>
+				<reference key="NSNextKeyView" ref="10127211"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
@@ -179,7 +179,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">findToursViewController</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="870717984"/>
+						<reference key="destination" ref="637191008"/>
 					</object>
 					<int key="connectionID">19</int>
 				</object>
@@ -187,7 +187,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">view</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="485328262"/>
+						<reference key="destination" ref="895469559"/>
 					</object>
 					<int key="connectionID">20</int>
 				</object>
@@ -195,14 +195,30 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">_tableview</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="870717984"/>
+						<reference key="destination" ref="637191008"/>
 					</object>
 					<int key="connectionID">21</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">_text_field</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="10127211"/>
+					</object>
+					<int key="connectionID">26</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="870717984"/>
+						<reference key="source" ref="10127211"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">24</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="637191008"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">22</int>
@@ -210,7 +226,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">dataSource</string>
-						<reference key="source" ref="870717984"/>
+						<reference key="source" ref="637191008"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">23</int>
@@ -237,36 +253,36 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">3</int>
-						<reference key="object" ref="485328262"/>
+						<reference key="object" ref="895469559"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="870717984"/>
-							<reference ref="993417086"/>
-							<reference ref="82170114"/>
-							<reference ref="825328598"/>
+							<reference ref="637191008"/>
+							<reference ref="10127211"/>
+							<reference ref="308285336"/>
+							<reference ref="739864660"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
-						<reference key="object" ref="993417086"/>
+						<reference key="object" ref="10127211"/>
 						<array class="NSMutableArray" key="children"/>
-						<reference key="parent" ref="485328262"/>
+						<reference key="parent" ref="895469559"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">5</int>
-						<reference key="object" ref="825328598"/>
-						<reference key="parent" ref="485328262"/>
+						<reference key="object" ref="739864660"/>
+						<reference key="parent" ref="895469559"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">6</int>
-						<reference key="object" ref="82170114"/>
-						<reference key="parent" ref="485328262"/>
+						<reference key="object" ref="308285336"/>
+						<reference key="parent" ref="895469559"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
-						<reference key="object" ref="870717984"/>
+						<reference key="object" ref="637191008"/>
 						<array class="NSMutableArray" key="children"/>
-						<reference key="parent" ref="485328262"/>
+						<reference key="parent" ref="895469559"/>
 					</object>
 				</array>
 			</object>
@@ -285,7 +301,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">23</int>
+			<int key="maxID">26</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -294,12 +310,17 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="_tableview">UITableView</string>
+						<string key="_text_field">UITextField</string>
 						<string key="findToursViewController">UITableView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="_tableview">
 							<string key="name">_tableview</string>
 							<string key="candidateClassName">UITableView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="_text_field">
+							<string key="name">_text_field</string>
+							<string key="candidateClassName">UITextField</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="findToursViewController">
 							<string key="name">findToursViewController</string>

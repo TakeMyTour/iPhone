@@ -22,8 +22,6 @@ static AFHTTPClient* client__ = nil;
     return client__;
 }
 
-
-
 +(void)clearCurrentClient
 {
     if (client__)

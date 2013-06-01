@@ -26,13 +26,22 @@
 		FF373AB01759901A00A53FD8 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373A631759901900A53FD8 /* AFXMLRequestOperation.m */; };
 		FF373AB11759901A00A53FD8 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373A651759901900A53FD8 /* UIImageView+AFNetworking.m */; };
 		FF373AD81759908000A53FD8 /* ClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373AD71759908000A53FD8 /* ClientManager.m */; };
-		FF373ADB1759910B00A53FD8 /* Options.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373ADA1759910B00A53FD8 /* Options.m */; };
+		FF373ADB1759910B00A53FD8 /* Options+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373ADA1759910B00A53FD8 /* Options+Methods.m */; };
 		FF373ADD1759919F00A53FD8 /* OptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF373ADC1759919F00A53FD8 /* OptionsView.xib */; };
 		FF373AE0175992F400A53FD8 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373ADF175992F300A53FD8 /* OptionsViewController.m */; };
 		FF373AE617599A8E00A53FD8 /* AFJSONRequestOperation+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373AE517599A8D00A53FD8 /* AFJSONRequestOperation+Constructor.m */; };
 		FF373AE91759A18600A53FD8 /* NSMutableURLRequest+CurlDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373AE81759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.m */; };
 		FF373AEC1759B43400A53FD8 /* AddTourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373AEB1759B43300A53FD8 /* AddTourCell.m */; };
 		FF373AEF1759B5AE00A53FD8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF373AED1759B5AE00A53FD8 /* Model.xcdatamodeld */; };
+		FF373B111759BD9400A53FD8 /* BaseObject+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373B101759BD9400A53FD8 /* BaseObject+Methods.m */; };
+		FF373B131759BE0D00A53FD8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF373B121759BE0D00A53FD8 /* CoreData.framework */; };
+		FF373B221759C01E00A53FD8 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373B211759C01D00A53FD8 /* DataManager.m */; };
+		FF373B281759CDAF00A53FD8 /* User+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373B271759CDAE00A53FD8 /* User+Methods.m */; };
+		FF373B2E1759D17B00A53FD8 /* Options.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373B2D1759D17A00A53FD8 /* Options.m */; };
+		FF373B311759D17C00A53FD8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373B301759D17C00A53FD8 /* User.m */; };
+		FF373B341759D17C00A53FD8 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373B331759D17C00A53FD8 /* BaseObject.m */; };
+		FF373B371759D17D00A53FD8 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373B361759D17D00A53FD8 /* Node.m */; };
+		FF373B3A1759D17D00A53FD8 /* Tour.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373B391759D17D00A53FD8 /* Tour.m */; };
 		FF97890A1758B50900325B2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9789091758B50900325B2D /* UIKit.framework */; };
 		FF97890C1758B50900325B2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF97890B1758B50900325B2D /* Foundation.framework */; };
 		FF97890E1758B50900325B2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF97890D1758B50900325B2D /* CoreGraphics.framework */; };
@@ -46,8 +55,8 @@
 		FF97892B1758B61400325B2D /* ToursView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF97892A1758B61400325B2D /* ToursView.xib */; };
 		FF9789311758BA4600325B2D /* NodesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9789301758BA4600325B2D /* NodesViewController.m */; };
 		FF9789331758BA5800325B2D /* NodesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9789321758BA5800325B2D /* NodesView.xib */; };
-		FF9789361758BC5E00325B2D /* Tour.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9789351758BC5E00325B2D /* Tour.m */; };
-		FF9789391758BF4300325B2D /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9789381758BF4300325B2D /* Node.m */; };
+		FF9789361758BC5E00325B2D /* Tour+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9789351758BC5E00325B2D /* Tour+Methods.m */; };
+		FF9789391758BF4300325B2D /* Node+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9789381758BF4300325B2D /* Node+Methods.m */; };
 		FF97893C1758C31F00325B2D /* NodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF97893B1758C31F00325B2D /* NodeViewController.m */; };
 		FF97893E1758C32D00325B2D /* NodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF97893D1758C32D00325B2D /* NodeView.xib */; };
 		FF9789401758C75700325B2D /* NodeWebCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF97893F1758C75700325B2D /* NodeWebCell.xib */; };
@@ -88,8 +97,8 @@
 		FF373A651759901900A53FD8 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		FF373AD61759908000A53FD8 /* ClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientManager.h; sourceTree = "<group>"; };
 		FF373AD71759908000A53FD8 /* ClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientManager.m; sourceTree = "<group>"; };
-		FF373AD91759910A00A53FD8 /* Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Options.h; sourceTree = "<group>"; };
-		FF373ADA1759910B00A53FD8 /* Options.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Options.m; sourceTree = "<group>"; };
+		FF373AD91759910A00A53FD8 /* Options+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Options+Methods.h"; sourceTree = "<group>"; };
+		FF373ADA1759910B00A53FD8 /* Options+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Options+Methods.m"; sourceTree = "<group>"; };
 		FF373ADC1759919F00A53FD8 /* OptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsView.xib; sourceTree = "<group>"; };
 		FF373ADE175992F300A53FD8 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
 		FF373ADF175992F300A53FD8 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
@@ -100,6 +109,23 @@
 		FF373AEA1759B43300A53FD8 /* AddTourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTourCell.h; sourceTree = "<group>"; };
 		FF373AEB1759B43300A53FD8 /* AddTourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTourCell.m; sourceTree = "<group>"; };
 		FF373AEE1759B5AE00A53FD8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FF373B0F1759BD9300A53FD8 /* BaseObject+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseObject+Methods.h"; sourceTree = "<group>"; };
+		FF373B101759BD9400A53FD8 /* BaseObject+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseObject+Methods.m"; sourceTree = "<group>"; };
+		FF373B121759BE0D00A53FD8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FF373B201759C01D00A53FD8 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		FF373B211759C01D00A53FD8 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		FF373B261759CDAD00A53FD8 /* User+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Methods.h"; sourceTree = "<group>"; };
+		FF373B271759CDAE00A53FD8 /* User+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Methods.m"; sourceTree = "<group>"; };
+		FF373B2C1759D17A00A53FD8 /* Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Options.h; sourceTree = "<group>"; };
+		FF373B2D1759D17A00A53FD8 /* Options.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Options.m; sourceTree = "<group>"; };
+		FF373B2F1759D17C00A53FD8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		FF373B301759D17C00A53FD8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		FF373B321759D17C00A53FD8 /* BaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
+		FF373B331759D17C00A53FD8 /* BaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
+		FF373B351759D17C00A53FD8 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		FF373B361759D17D00A53FD8 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		FF373B381759D17D00A53FD8 /* Tour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tour.h; sourceTree = "<group>"; };
+		FF373B391759D17D00A53FD8 /* Tour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tour.m; sourceTree = "<group>"; };
 		FF9789061758B50900325B2D /* GovHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GovHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9789091758B50900325B2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FF97890B1758B50900325B2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,10 +146,10 @@
 		FF97892F1758BA4600325B2D /* NodesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodesViewController.h; sourceTree = "<group>"; };
 		FF9789301758BA4600325B2D /* NodesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodesViewController.m; sourceTree = "<group>"; };
 		FF9789321758BA5800325B2D /* NodesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodesView.xib; sourceTree = "<group>"; };
-		FF9789341758BC5E00325B2D /* Tour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tour.h; sourceTree = "<group>"; };
-		FF9789351758BC5E00325B2D /* Tour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tour.m; sourceTree = "<group>"; };
-		FF9789371758BF4300325B2D /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
-		FF9789381758BF4300325B2D /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		FF9789341758BC5E00325B2D /* Tour+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tour+Methods.h"; sourceTree = "<group>"; };
+		FF9789351758BC5E00325B2D /* Tour+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Tour+Methods.m"; sourceTree = "<group>"; };
+		FF9789371758BF4300325B2D /* Node+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Node+Methods.h"; sourceTree = "<group>"; };
+		FF9789381758BF4300325B2D /* Node+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Node+Methods.m"; sourceTree = "<group>"; };
 		FF97893A1758C31F00325B2D /* NodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeViewController.h; sourceTree = "<group>"; };
 		FF97893B1758C31F00325B2D /* NodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeViewController.m; sourceTree = "<group>"; };
 		FF97893D1758C32D00325B2D /* NodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodeView.xib; sourceTree = "<group>"; };
@@ -137,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF373B131759BE0D00A53FD8 /* CoreData.framework in Frameworks */,
 				FF373A42175978C300A53FD8 /* CoreLocation.framework in Frameworks */,
 				FF373A401759735200A53FD8 /* MapKit.framework in Frameworks */,
 				FF97890A1758B50900325B2D /* UIKit.framework in Frameworks */,
@@ -187,6 +214,16 @@
 		FF373AF01759B9EE00A53FD8 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				FF373B2C1759D17A00A53FD8 /* Options.h */,
+				FF373B2D1759D17A00A53FD8 /* Options.m */,
+				FF373B2F1759D17C00A53FD8 /* User.h */,
+				FF373B301759D17C00A53FD8 /* User.m */,
+				FF373B321759D17C00A53FD8 /* BaseObject.h */,
+				FF373B331759D17C00A53FD8 /* BaseObject.m */,
+				FF373B351759D17C00A53FD8 /* Node.h */,
+				FF373B361759D17D00A53FD8 /* Node.m */,
+				FF373B381759D17D00A53FD8 /* Tour.h */,
+				FF373B391759D17D00A53FD8 /* Tour.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -194,6 +231,7 @@
 		FF9788FD1758B50900325B2D = {
 			isa = PBXGroup;
 			children = (
+				FF373B121759BE0D00A53FD8 /* CoreData.framework */,
 				FF373A4F1759901900A53FD8 /* AFNetworking */,
 				FF97890F1758B50900325B2D /* GovHack */,
 				FF9789081758B50900325B2D /* Frameworks */,
@@ -224,8 +262,6 @@
 		FF97890F1758B50900325B2D /* GovHack */ = {
 			isa = PBXGroup;
 			children = (
-				FF373AF01759B9EE00A53FD8 /* model */,
-				FF373AED1759B5AE00A53FD8 /* Model.xcdatamodeld */,
 				FF373AEA1759B43300A53FD8 /* AddTourCell.h */,
 				FF373AEB1759B43300A53FD8 /* AddTourCell.m */,
 				FF373A4517598B7400A53FD8 /* AddTourCell.xib */,
@@ -233,8 +269,12 @@
 				FF373AE517599A8D00A53FD8 /* AFJSONRequestOperation+Constructor.m */,
 				FF9789181758B50900325B2D /* AppDelegate.h */,
 				FF9789191758B50900325B2D /* AppDelegate.m */,
+				FF373B0F1759BD9300A53FD8 /* BaseObject+Methods.h */,
+				FF373B101759BD9400A53FD8 /* BaseObject+Methods.m */,
 				FF373AD61759908000A53FD8 /* ClientManager.h */,
 				FF373AD71759908000A53FD8 /* ClientManager.m */,
+				FF373B201759C01D00A53FD8 /* DataManager.h */,
+				FF373B211759C01D00A53FD8 /* DataManager.m */,
 				FF373A4317598B0900A53FD8 /* FindToursView.xib */,
 				FF373A4C17598E4C00A53FD8 /* FindToursViewController.h */,
 				FF373A4D17598E4C00A53FD8 /* FindToursViewController.m */,
@@ -242,8 +282,10 @@
 				FF373A4917598D1500A53FD8 /* MainViewController.h */,
 				FF373A4A17598D1600A53FD8 /* MainViewController.m */,
 				FF373A3B1759720500A53FD8 /* MapButton.xib */,
-				FF9789371758BF4300325B2D /* Node.h */,
-				FF9789381758BF4300325B2D /* Node.m */,
+				FF373AF01759B9EE00A53FD8 /* model */,
+				FF373AED1759B5AE00A53FD8 /* Model.xcdatamodeld */,
+				FF9789371758BF4300325B2D /* Node+Methods.h */,
+				FF9789381758BF4300325B2D /* Node+Methods.m */,
 				FF9789321758BA5800325B2D /* NodesView.xib */,
 				FF97892F1758BA4600325B2D /* NodesViewController.h */,
 				FF9789301758BA4600325B2D /* NodesViewController.m */,
@@ -255,18 +297,20 @@
 				FF97893F1758C75700325B2D /* NodeWebCell.xib */,
 				FF373AE71759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.h */,
 				FF373AE81759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.m */,
-				FF373AD91759910A00A53FD8 /* Options.h */,
-				FF373ADA1759910B00A53FD8 /* Options.m */,
+				FF373AD91759910A00A53FD8 /* Options+Methods.h */,
+				FF373ADA1759910B00A53FD8 /* Options+Methods.m */,
 				FF373ADC1759919F00A53FD8 /* OptionsView.xib */,
 				FF373ADE175992F300A53FD8 /* OptionsViewController.h */,
 				FF373ADF175992F300A53FD8 /* OptionsViewController.m */,
 				FF9789291758B5D300325B2D /* project.h */,
 				FF9789101758B50900325B2D /* Supporting Files */,
-				FF9789341758BC5E00325B2D /* Tour.h */,
-				FF9789351758BC5E00325B2D /* Tour.m */,
+				FF9789341758BC5E00325B2D /* Tour+Methods.h */,
+				FF9789351758BC5E00325B2D /* Tour+Methods.m */,
 				FF97892A1758B61400325B2D /* ToursView.xib */,
 				FF9789261758B53800325B2D /* ToursViewController.h */,
 				FF9789271758B53800325B2D /* ToursViewController.m */,
+				FF373B261759CDAD00A53FD8 /* User+Methods.h */,
+				FF373B271759CDAE00A53FD8 /* User+Methods.m */,
 			);
 			path = GovHack;
 			sourceTree = "<group>";
@@ -363,8 +407,8 @@
 				FF97891A1758B50900325B2D /* AppDelegate.m in Sources */,
 				FF9789281758B53800325B2D /* ToursViewController.m in Sources */,
 				FF9789311758BA4600325B2D /* NodesViewController.m in Sources */,
-				FF9789361758BC5E00325B2D /* Tour.m in Sources */,
-				FF9789391758BF4300325B2D /* Node.m in Sources */,
+				FF9789361758BC5E00325B2D /* Tour+Methods.m in Sources */,
+				FF9789391758BF4300325B2D /* Node+Methods.m in Sources */,
 				FF97893C1758C31F00325B2D /* NodeViewController.m in Sources */,
 				FF9789431758C7ED00325B2D /* NodeWebCell.m in Sources */,
 				FF373A4B17598D1600A53FD8 /* MainViewController.m in Sources */,
@@ -380,12 +424,20 @@
 				FF373AB01759901A00A53FD8 /* AFXMLRequestOperation.m in Sources */,
 				FF373AB11759901A00A53FD8 /* UIImageView+AFNetworking.m in Sources */,
 				FF373AD81759908000A53FD8 /* ClientManager.m in Sources */,
-				FF373ADB1759910B00A53FD8 /* Options.m in Sources */,
+				FF373ADB1759910B00A53FD8 /* Options+Methods.m in Sources */,
 				FF373AE0175992F400A53FD8 /* OptionsViewController.m in Sources */,
 				FF373AE617599A8E00A53FD8 /* AFJSONRequestOperation+Constructor.m in Sources */,
 				FF373AE91759A18600A53FD8 /* NSMutableURLRequest+CurlDescription.m in Sources */,
 				FF373AEC1759B43400A53FD8 /* AddTourCell.m in Sources */,
 				FF373AEF1759B5AE00A53FD8 /* Model.xcdatamodeld in Sources */,
+				FF373B111759BD9400A53FD8 /* BaseObject+Methods.m in Sources */,
+				FF373B221759C01E00A53FD8 /* DataManager.m in Sources */,
+				FF373B281759CDAF00A53FD8 /* User+Methods.m in Sources */,
+				FF373B2E1759D17B00A53FD8 /* Options.m in Sources */,
+				FF373B311759D17C00A53FD8 /* User.m in Sources */,
+				FF373B341759D17C00A53FD8 /* BaseObject.m in Sources */,
+				FF373B371759D17D00A53FD8 /* Node.m in Sources */,
+				FF373B3A1759D17D00A53FD8 /* Tour.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

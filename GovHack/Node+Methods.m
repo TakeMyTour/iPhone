@@ -6,34 +6,25 @@
 //  Copyright (c) 2013 Myles. All rights reserved.
 //
 
-#import "Node.h"
+#import "Node+Methods.h"
 #import "project.h"
 
-@interface Node()
+
+@implementation Node(Methods)
+
+
++(Node*)createLocal
 {
-    
+    NSManagedObjectContext *moc = [DataManager mainContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Node" inManagedObjectContext:moc];
+    Node* toRet = [[Node alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:moc];
+    return toRet;
 }
--(void)setup;
-@end
-
-
-
-@implementation Node
-
-@synthesize name = _name;
-@synthesize description = _description;
-@synthesize images = _images;
-
-@synthesize longitude;
-@synthesize latitude;
-@synthesize address = _address;
-
-
 
 -(void)setup
 {
     NSMutableArray* images = [[NSMutableArray alloc] init];
-    _images = images;
+   // _images = images;
 }
 
 -(id)init
@@ -89,7 +80,7 @@
         }
         else
         {
-            CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(self.longitude, self.latitude);
+            CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(self.gps_longitude.doubleValue, self.gps_latitude.doubleValue);
             
             MKPlacemark* placemark = [[MKPlacemark alloc] initWithCoordinate:loc addressDictionary:nil];
             

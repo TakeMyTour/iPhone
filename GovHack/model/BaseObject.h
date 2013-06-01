@@ -1,5 +1,5 @@
 //
-//  Options.h
+//  BaseObject.h
 //  GovHack
 //
 //  Created by Myles on 1/06/13.
@@ -7,14 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface Options : NSObject
-
-+(Options*)sharedInstance;
-
-@property (copy, nonatomic) NSString* baseURL;
+#import <CoreData/CoreData.h>
 
 
+@interface BaseObject : NSManagedObject
 
+@property (nonatomic, retain) NSNumber * id;
 
 @end

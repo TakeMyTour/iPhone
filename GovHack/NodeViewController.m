@@ -103,7 +103,7 @@ typedef enum
     {
         case NodeSectionDescription:
         {
-            if (self.node.description!=nil)
+            if (self.node.description_text!=nil)
             {
                 return 1;
             }
@@ -112,7 +112,7 @@ typedef enum
         }
         case NodeSectionImages:
         {
-            return self.node.images.count;
+            //return self.node.images.count;
             break;
         }
     }
@@ -155,7 +155,7 @@ typedef enum
             {
                 web_cell = [[[NSBundle mainBundle] loadNibNamed:@"NodeWebCell" owner:nil options:nil] lastObject];
             }
-            [web_cell setup_html:self.node.description];
+            [web_cell setup_html:self.node.description_text];
             cell = web_cell;
             
             break;

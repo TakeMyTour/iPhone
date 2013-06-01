@@ -15,6 +15,9 @@
     IBOutlet UITableView *findToursViewController;
     NSArray* _current_tours;
     IBOutlet UITableView *_tableview;
+    IBOutlet UITextField *_text_field;
+    
+    
 }
 @property (retain, nonatomic) NSArray* current_tours;  
 
@@ -55,23 +58,25 @@
     [_tableview reloadData];
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)search
 {
-    [self navigationItem].title = @"Find Tours";
-    NSDictionary* params = [[NSDictionary alloc] init];
+    NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
+    [params setValue:_text_field.text forKey:@"name"];
+    //  http://unleashed.oeg.com.au/tours/search?name=adelaide
+    NSString* path = @"/tours/search";
     
-    NSMutableURLRequest* request = [ClientManager requestWithMethod:@"GET" path:@"/tours" parameters:nil];
+    NSMutableURLRequest* request = [ClientManager requestWithMethod:@"GET" path:path parameters:params];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success_:^(AFJSONRequestOperation*operation) {
-        NSLog(@"Success! %@", operation.responseJSON);
+        // NSLog(@"Success! %@", operation.responseJSON);
         NSArray* tours = operation.responseJSON;
         
         NSMutableArray* current_tours = [[NSMutableArray alloc] initWithCapacity:tours.count];
         
         for (NSDictionary* tour_data in tours)
         {
-            Tour* tour = [[Tour alloc] initFromDictionary:tour_data];
+            Tour* tour = [Tour newObjectFromDictionary:tour_data];
             [current_tours addObject:tour];
         }
         [self setCurrentTours:current_tours];
@@ -81,9 +86,73 @@
         NSLog(@"Failure: %@", response);
         NSLog(@"error: %@", [[operation error] description]);
     }];
-
+    
     [params release];
     [operation start];
+}
+
+-(void)search_all
+{
+    NSDictionary* params = [[NSDictionary alloc] init];
+    
+    NSMutableURLRequest* request = [ClientManager requestWithMethod:@"GET" path:@"/tours" parameters:nil];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success_:^(AFJSONRequestOperation*operation) {
+        // NSLog(@"Success! %@", operation.responseJSON);
+        NSArray* tours = operation.responseJSON;
+        
+        NSMutableArray* current_tours = [[NSMutableArray alloc] initWithCapacity:tours.count];
+        
+        for (NSDictionary* tour_data in tours)
+        {
+            Tour* tour = [Tour newObjectFromDictionary:tour_data];
+            [current_tours addObject:tour];
+        }
+        [self setCurrentTours:current_tours];
+        
+    } failure_:^(AFJSONRequestOperation*operation) {
+        NSString* response = [operation responseJSON] ? [operation responseJSON] : [operation responseString];
+        NSLog(@"Failure: %@", response);
+        NSLog(@"error: %@", [[operation error] description]);
+    }];
+    
+    [params release];
+    [operation start];
+}
+
+-(void)refresh_data
+{
+    if (_text_field.text.length==0)
+    {
+        [self search_all];
+    }
+    else
+    {
+        [self search];
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self navigationItem].title = @"Find Tours";
+    [self refresh_data];
+}
+
+#pragma mark - Text Field
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self refresh_data];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if ([textField isFirstResponder] && [textField canResignFirstResponder])
+    {
+        [textField resignFirstResponder]; 
+    }
+    return YES;
 }
 
 #pragma mark - UITableView Delegate
@@ -107,7 +176,32 @@
     }
     Tour* tour = [self.current_tours objectAtIndex:indexPath.row];
     cell.label.text = tour.name;
+    
+    if (tour.tours_user_inverse!=nil)
+    {
+        cell.button.hidden = YES;
+    }
+    else
+    {
+        cell.button.hidden = NO;
+    }
+    
+    cell.tour = tour;
+    cell.delegate = self;
     return cell;
+}
+
+#pragma mark - addTourCellButtonPressed
+
+-(void)addTourCellButtonPressed:(AddTourCell*)cell
+{
+    if (cell.tour.tours_user_inverse==nil)
+    {
+        cell.tour.tours_user_inverse = [User sharedInstance];
+        cell.button.hidden = YES;
+        [DataManager save];
+    }
+    // otherwise the button shouldnt have been visible, but anyway...
 }
 
 
@@ -117,6 +211,7 @@
 {
     [findToursViewController release];
     [_tableview release];
+    [_text_field release];
     [super dealloc];
 }
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddTourCell.h"
 
-@interface FindToursViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@interface FindToursViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, AddTourCellDelegate, UITextFieldDelegate>
 
 @end

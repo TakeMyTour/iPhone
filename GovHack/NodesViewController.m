@@ -61,8 +61,30 @@
     [[self navigationController] pushViewController:ctrl animated:YES];
 }
 
+-(void)refresh_data
+{
+    NSString* path = [NSString stringWithFormat:@"/tour/%d", [self.tour.id intValue]];
+    NSDictionary* params = [[NSDictionary alloc] init];
+    NSMutableURLRequest* request = [ClientManager requestWithMethod:@"GET" path:path parameters:nil];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success_:^(AFJSONRequestOperation*operation) {
+        NSLog(@"Success! %@", operation.responseJSON);
+        [self.tour setupFromDictionary:operation.responseJSON];
+        [_tableview reloadData];
+    } failure_:^(AFJSONRequestOperation*operation) {
+        NSString* response = [operation responseJSON] ? [operation responseJSON] : [operation responseString];
+        NSLog(@"Failure: %@", response);
+        NSLog(@"error: %@", [[operation error] description]);
+    }];
+    
+    [params release];
+    [operation start];
+}
+
 -(void)viewDidAppear:(BOOL)animated
 {
+    [self refresh_data];
     self.navigationItem.title = self.tour.name;
     UIButton* button = [[[NSBundle mainBundle] loadNibNamed:@"MapButton" owner:nil options:nil] lastObject];
     [button addTarget:self action:@selector(mapButtonPressed) forControlEvents:UIControlEventTouchUpInside];
@@ -97,6 +119,7 @@
     }
     Node* node = [self.tour.nodes objectAtIndex:indexPath.row];
     cell.textLabel.text = node.name;
+    
     
     return cell;
 }

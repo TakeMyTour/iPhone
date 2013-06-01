@@ -25,26 +25,31 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
+# if 0
         _tours = [[NSMutableArray alloc] init];
-        Tour* tour = [[Tour alloc] init:@"My Tour" tour_type:TourTypeBasic];
+        Tour* tour = [Tour createLocal];
+        tour.name = @"My Tour";
+        tour.tour_type = TourTypeBasic;
         
-        Node* node1 = [[Node alloc] init:@"Node 1"];
-        node1.longitude = -34.9333;
-        node1.latitude = 138.5833;
+        Node* node1 = [Node createLocal];
+        node1.name = @"Node 1";
+        node1.gps_longitude = [NSNumber numberWithDouble:-34.9333];
+        node1.gps_latitude = [NSNumber numberWithDouble:138.5833];
         
-        node1.description = @"<html><body><h1>Hello, world!</h1></body></html>";
-        [node1.images addObject:@"https://secure.gravatar.com/avatar/5cef062286e5e39adb3e0e5dac4f5b74?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"];
+        node1.description_text = @"<html><body><h1>Hello, world!</h1></body></html>";
+       // [node1.images addObject:@"https://secure.gravatar.com/avatar/5cef062286e5e39adb3e0e5dac4f5b74?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"];
         
-        Node* node2 = [[Node alloc] init:@"Node 2"];
-        node2.description = @"Foobar";
+        Node* node2 = [Node createLocal];
+        node2.name = @"Node 2";
+        node2.description_text = @"Foobar";
         node2.address = @"Adelaide, Australia";
-        
-        
-        [tour.nodes addObject:node1];
-        [tour.nodes addObject:node2];
-        
+        node1.nodes_inverse = tour;
+        node2.nodes_inverse = tour;
         
         [_tours addObject:tour];
+        
+#endif
+        _tours = [[[User sharedInstance].tours allObjects] mutableCopy];
     }
     return self;
 }
@@ -52,6 +57,8 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     self.navigationItem.title = @"My Tours";
+    // send the request to refresh data!
+    
 }
 
 - (void)viewDidLoad
@@ -107,7 +114,7 @@
         if (0 <= indexPath.row && indexPath.row < _tours.count)
         {
             Tour* selected = [_tours objectAtIndex:indexPath.row];
-            if (selected.tour_type==TourTypeBasic)
+            if (selected.tour_type.intValue==TourTypeBasic)
             {
                 NodesViewController* ctrl = [[NodesViewController alloc] init:selected];
                 [[self navigationController] pushViewController:ctrl animated:YES];

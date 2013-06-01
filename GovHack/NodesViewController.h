@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Tour.h"
+#import "Tour+Methods.h"
 
 @interface NodesViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate>
 
