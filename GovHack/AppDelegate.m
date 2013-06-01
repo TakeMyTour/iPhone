@@ -30,7 +30,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    ToursViewController* root_ctrl = [[ToursViewController alloc] init];
+    UIViewController* root_ctrl = [[MainViewController alloc] init];
     UINavigationController* ctrl = [[UINavigationController alloc] initWithRootViewController:root_ctrl];
     self.window.rootViewController = ctrl;
     

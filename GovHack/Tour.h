@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <MapKit/MapKit.h>
 
 typedef enum
 {
@@ -20,7 +20,7 @@ typedef enum
 
 -(id)init;
 -(id)init:(NSString*)name tour_type:(int)type;
-
+-(void)addToMap:(MKMapView*)map;
 
 @property (copy, nonatomic) NSString* name;
 @property (assign, nonatomic) int tour_type;

@@ -48,6 +48,26 @@
 	// Do any additional setup after loading the view.
 }
 
+-(void)mapButtonPressed
+{   //  Map View  //
+    UIViewController* ctrl = [[UIViewController alloc] init];
+    MKMapView* map = [[MKMapView alloc] initWithFrame:ctrl.view.bounds];
+    map.delegate = self;
+    [ctrl.view addSubview:map];
+    
+    [self.tour addToMap:map];
+    
+    [[self navigationController] pushViewController:ctrl animated:YES];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    UIButton* button = [[[NSBundle mainBundle] loadNibNamed:@"MapButton" owner:nil options:nil] lastObject];
+    [button addTarget:self action:@selector(mapButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem* rightButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    [[self navigationItem] setRightBarButtonItem:rightButton];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -9,8 +9,20 @@
 #import "ToursViewController.h"
 #import "NodesViewController.h"
 #import "NodeViewController.h"
+#import "MainViewController.h"
+#import "FindToursViewController.h"
+#import "OptionsViewController.h"
 
 #import "NodeWebCell.h"
 
 #import "Tour.h"
 #import "Node.h"
+
+#import "Options.h"
+#import "ClientManager.h"
+#import "AFJSONRequestOperation+Constructor.h"
+
+#import <MapKit/MapKit.h>
+//#import <MKMapView.h>
+//#import <MKTypes.h>
+

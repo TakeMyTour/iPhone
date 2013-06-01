@@ -29,11 +29,15 @@
         Tour* tour = [[Tour alloc] init:@"My Tour" tour_type:TourTypeBasic];
         
         Node* node1 = [[Node alloc] init:@"Node 1"];
-        node1.description = @"<html><body><h1>Hello, world!</h1></body></html>";
+        node1.longitude = -34.9333;
+        node1.latitude = 138.5833;
         
+        node1.description = @"<html><body><h1>Hello, world!</h1></body></html>";
+        [node1.images addObject:@"https://secure.gravatar.com/avatar/5cef062286e5e39adb3e0e5dac4f5b74?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"];
         
         Node* node2 = [[Node alloc] init:@"Node 2"];
         node2.description = @"Foobar";
+        node2.address = @"Adelaide, Australia";
         
         
         [tour.nodes addObject:node1];

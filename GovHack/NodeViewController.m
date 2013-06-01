@@ -13,6 +13,7 @@
 {
     IBOutlet UITableView *_tableview;
 }
+-(void)mapButtonPressed;
 
 
 @end
@@ -46,6 +47,32 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    return nil;
+}
+
+-(void)mapButtonPressed
+{   //  Map View  //
+    UIViewController* ctrl = [[UIViewController alloc] init];
+    MKMapView* map = [[MKMapView alloc] initWithFrame:ctrl.view.bounds];
+    map.delegate = self;
+    [ctrl.view addSubview:map];
+    
+    [self.node addToMap:map];
+    
+    [[self navigationController] pushViewController:ctrl animated:YES];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    UIButton* button = [[[NSBundle mainBundle] loadNibNamed:@"MapButton" owner:nil options:nil] lastObject];
+    [button addTarget:self action:@selector(mapButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem* rightButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    [[self navigationItem] setRightBarButtonItem:rightButton];
 }
 
 - (void)didReceiveMemoryWarning

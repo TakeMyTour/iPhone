@@ -7,6 +7,7 @@
 //
 
 #import "Tour.h"
+#import "project.h"
 
 
 @interface Tour()
@@ -50,5 +51,12 @@
     return self;
 }
 
+-(void)addToMap:(MKMapView*)map
+{
+    for (Node* node in self.nodes)
+    {
+        [node addToMap:map];
+    }
+}
 
 @end

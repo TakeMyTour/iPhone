@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Tour.h"
 
-@interface NodesViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface NodesViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate>
 
 
 -(id)init:(Tour*)tour;
