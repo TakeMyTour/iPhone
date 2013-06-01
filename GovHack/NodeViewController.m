@@ -69,6 +69,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    self.navigationItem.title = self.node.name;
     UIButton* button = [[[NSBundle mainBundle] loadNibNamed:@"MapButton" owner:nil options:nil] lastObject];
     [button addTarget:self action:@selector(mapButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* rightButton = [[UIBarButtonItem alloc] initWithCustomView:button];
@@ -152,7 +153,7 @@ typedef enum
             NodeWebCell* web_cell = [tableView dequeueReusableCellWithIdentifier:@"NodeWebCell"];
             if (web_cell==nil)
             {
-                web_cell = [[[NSBundle mainBundle] loadNibNamed:@"NodeWebCell" owner:nil options:nil] objectAtIndex:0];
+                web_cell = [[[NSBundle mainBundle] loadNibNamed:@"NodeWebCell" owner:nil options:nil] lastObject];
             }
             [web_cell setup_html:self.node.description];
             cell = web_cell;

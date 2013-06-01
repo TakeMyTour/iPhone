@@ -13,6 +13,7 @@
 -(id)init;
 
 -(id)init:(NSString*)name;
+
 -(void)addToMap:(MKMapView*)map;
 
 @property (copy, nonatomic) NSString* name;

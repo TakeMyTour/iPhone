@@ -31,6 +31,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
+        [_tableview registerNib:[UINib nibWithNibName:@"AddTourCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"AddTourCell"];
         _current_tours = [[NSArray alloc] init];
     }
     return self;
@@ -56,6 +57,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    [self navigationItem].title = @"Find Tours";
     NSDictionary* params = [[NSDictionary alloc] init];
     
     NSMutableURLRequest* request = [ClientManager requestWithMethod:@"GET" path:@"/tours" parameters:nil];
@@ -98,7 +100,14 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [[UITableViewCell alloc] init];
+    AddTourCell* cell = [tableView dequeueReusableCellWithIdentifier:@"AddTourCell"];
+    if (cell==nil)
+    {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"AddTourCell" owner:nil options:nil] lastObject];
+    }
+    Tour* tour = [self.current_tours objectAtIndex:indexPath.row];
+    cell.label.text = tour.name;
+    return cell;
 }
 
 

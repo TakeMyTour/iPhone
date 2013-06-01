@@ -27,6 +27,7 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -41,8 +42,8 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    self.navigationItem.title = @"Options";
     _base_url_textview.text = [Options sharedInstance].baseURL;
-    
 }
 
 #pragma mark - Text Field

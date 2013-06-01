@@ -49,6 +49,11 @@
     return self;
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    self.navigationItem.title = @"My Tours";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="11G63" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Node" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="description_text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gps_latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="gps_longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="nodes_inverse" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Tour" inverseName="nodes" inverseEntity="Tour" syncable="YES"/>
+    </entity>
+    <entity name="Options" syncable="YES">
+        <attribute name="baseURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Tour" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tour_type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="nodes" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Node" inverseName="nodes_inverse" inverseEntity="Node" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Tour" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Node" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Options" positionX="160" positionY="192" width="128" height="60"/>
+    </elements>
+</model>

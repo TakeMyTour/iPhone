@@ -31,6 +31,8 @@
 		FF373AE0175992F400A53FD8 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373ADF175992F300A53FD8 /* OptionsViewController.m */; };
 		FF373AE617599A8E00A53FD8 /* AFJSONRequestOperation+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373AE517599A8D00A53FD8 /* AFJSONRequestOperation+Constructor.m */; };
 		FF373AE91759A18600A53FD8 /* NSMutableURLRequest+CurlDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373AE81759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.m */; };
+		FF373AEC1759B43400A53FD8 /* AddTourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373AEB1759B43300A53FD8 /* AddTourCell.m */; };
+		FF373AEF1759B5AE00A53FD8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF373AED1759B5AE00A53FD8 /* Model.xcdatamodeld */; };
 		FF97890A1758B50900325B2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9789091758B50900325B2D /* UIKit.framework */; };
 		FF97890C1758B50900325B2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF97890B1758B50900325B2D /* Foundation.framework */; };
 		FF97890E1758B50900325B2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF97890D1758B50900325B2D /* CoreGraphics.framework */; };
@@ -95,6 +97,9 @@
 		FF373AE517599A8D00A53FD8 /* AFJSONRequestOperation+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFJSONRequestOperation+Constructor.m"; sourceTree = "<group>"; };
 		FF373AE71759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+CurlDescription.h"; sourceTree = "<group>"; };
 		FF373AE81759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+CurlDescription.m"; sourceTree = "<group>"; };
+		FF373AEA1759B43300A53FD8 /* AddTourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTourCell.h; sourceTree = "<group>"; };
+		FF373AEB1759B43300A53FD8 /* AddTourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTourCell.m; sourceTree = "<group>"; };
+		FF373AEE1759B5AE00A53FD8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		FF9789061758B50900325B2D /* GovHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GovHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9789091758B50900325B2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FF97890B1758B50900325B2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -179,6 +184,13 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		FF373AF01759B9EE00A53FD8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		FF9788FD1758B50900325B2D = {
 			isa = PBXGroup;
 			children = (
@@ -212,11 +224,17 @@
 		FF97890F1758B50900325B2D /* GovHack */ = {
 			isa = PBXGroup;
 			children = (
-				FF373AE71759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.h */,
-				FF373AE81759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.m */,
+				FF373AF01759B9EE00A53FD8 /* model */,
+				FF373AED1759B5AE00A53FD8 /* Model.xcdatamodeld */,
+				FF373AEA1759B43300A53FD8 /* AddTourCell.h */,
+				FF373AEB1759B43300A53FD8 /* AddTourCell.m */,
 				FF373A4517598B7400A53FD8 /* AddTourCell.xib */,
+				FF373AE417599A8D00A53FD8 /* AFJSONRequestOperation+Constructor.h */,
+				FF373AE517599A8D00A53FD8 /* AFJSONRequestOperation+Constructor.m */,
 				FF9789181758B50900325B2D /* AppDelegate.h */,
 				FF9789191758B50900325B2D /* AppDelegate.m */,
+				FF373AD61759908000A53FD8 /* ClientManager.h */,
+				FF373AD71759908000A53FD8 /* ClientManager.m */,
 				FF373A4317598B0900A53FD8 /* FindToursView.xib */,
 				FF373A4C17598E4C00A53FD8 /* FindToursViewController.h */,
 				FF373A4D17598E4C00A53FD8 /* FindToursViewController.m */,
@@ -235,6 +253,13 @@
 				FF9789411758C7ED00325B2D /* NodeWebCell.h */,
 				FF9789421758C7ED00325B2D /* NodeWebCell.m */,
 				FF97893F1758C75700325B2D /* NodeWebCell.xib */,
+				FF373AE71759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.h */,
+				FF373AE81759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.m */,
+				FF373AD91759910A00A53FD8 /* Options.h */,
+				FF373ADA1759910B00A53FD8 /* Options.m */,
+				FF373ADC1759919F00A53FD8 /* OptionsView.xib */,
+				FF373ADE175992F300A53FD8 /* OptionsViewController.h */,
+				FF373ADF175992F300A53FD8 /* OptionsViewController.m */,
 				FF9789291758B5D300325B2D /* project.h */,
 				FF9789101758B50900325B2D /* Supporting Files */,
 				FF9789341758BC5E00325B2D /* Tour.h */,
@@ -242,15 +267,6 @@
 				FF97892A1758B61400325B2D /* ToursView.xib */,
 				FF9789261758B53800325B2D /* ToursViewController.h */,
 				FF9789271758B53800325B2D /* ToursViewController.m */,
-				FF373AD61759908000A53FD8 /* ClientManager.h */,
-				FF373AD71759908000A53FD8 /* ClientManager.m */,
-				FF373AD91759910A00A53FD8 /* Options.h */,
-				FF373ADA1759910B00A53FD8 /* Options.m */,
-				FF373ADC1759919F00A53FD8 /* OptionsView.xib */,
-				FF373ADE175992F300A53FD8 /* OptionsViewController.h */,
-				FF373ADF175992F300A53FD8 /* OptionsViewController.m */,
-				FF373AE417599A8D00A53FD8 /* AFJSONRequestOperation+Constructor.h */,
-				FF373AE517599A8D00A53FD8 /* AFJSONRequestOperation+Constructor.m */,
 			);
 			path = GovHack;
 			sourceTree = "<group>";
@@ -368,6 +384,8 @@
 				FF373AE0175992F400A53FD8 /* OptionsViewController.m in Sources */,
 				FF373AE617599A8E00A53FD8 /* AFJSONRequestOperation+Constructor.m in Sources */,
 				FF373AE91759A18600A53FD8 /* NSMutableURLRequest+CurlDescription.m in Sources */,
+				FF373AEC1759B43400A53FD8 /* AddTourCell.m in Sources */,
+				FF373AEF1759B5AE00A53FD8 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +501,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FF373AED1759B5AE00A53FD8 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FF373AEE1759B5AE00A53FD8 /* Model.xcdatamodel */,
+			);
+			currentVersion = FF373AEE1759B5AE00A53FD8 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FF9788FE1758B50900325B2D /* Project object */;
 }

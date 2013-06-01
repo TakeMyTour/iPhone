@@ -18,6 +18,7 @@
 #import "Tour.h"
 #import "Node.h"
 
+#import "AddTourCell.h"
 #import "Options.h"
 #import "ClientManager.h"
 #import "AFNetworking.h"
