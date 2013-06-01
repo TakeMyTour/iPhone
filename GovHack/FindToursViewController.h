@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FindToursViewController : UIViewController
+@interface FindToursViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @end

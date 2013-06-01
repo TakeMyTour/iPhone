@@ -30,6 +30,7 @@
 		FF373ADD1759919F00A53FD8 /* OptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF373ADC1759919F00A53FD8 /* OptionsView.xib */; };
 		FF373AE0175992F400A53FD8 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373ADF175992F300A53FD8 /* OptionsViewController.m */; };
 		FF373AE617599A8E00A53FD8 /* AFJSONRequestOperation+Constructor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373AE517599A8D00A53FD8 /* AFJSONRequestOperation+Constructor.m */; };
+		FF373AE91759A18600A53FD8 /* NSMutableURLRequest+CurlDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = FF373AE81759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.m */; };
 		FF97890A1758B50900325B2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9789091758B50900325B2D /* UIKit.framework */; };
 		FF97890C1758B50900325B2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF97890B1758B50900325B2D /* Foundation.framework */; };
 		FF97890E1758B50900325B2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF97890D1758B50900325B2D /* CoreGraphics.framework */; };
@@ -92,6 +93,8 @@
 		FF373ADF175992F300A53FD8 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
 		FF373AE417599A8D00A53FD8 /* AFJSONRequestOperation+Constructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFJSONRequestOperation+Constructor.h"; sourceTree = "<group>"; };
 		FF373AE517599A8D00A53FD8 /* AFJSONRequestOperation+Constructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFJSONRequestOperation+Constructor.m"; sourceTree = "<group>"; };
+		FF373AE71759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+CurlDescription.h"; sourceTree = "<group>"; };
+		FF373AE81759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+CurlDescription.m"; sourceTree = "<group>"; };
 		FF9789061758B50900325B2D /* GovHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GovHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9789091758B50900325B2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FF97890B1758B50900325B2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -209,6 +212,8 @@
 		FF97890F1758B50900325B2D /* GovHack */ = {
 			isa = PBXGroup;
 			children = (
+				FF373AE71759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.h */,
+				FF373AE81759A18500A53FD8 /* NSMutableURLRequest+CurlDescription.m */,
 				FF373A4517598B7400A53FD8 /* AddTourCell.xib */,
 				FF9789181758B50900325B2D /* AppDelegate.h */,
 				FF9789191758B50900325B2D /* AppDelegate.m */,
@@ -362,6 +367,7 @@
 				FF373ADB1759910B00A53FD8 /* Options.m in Sources */,
 				FF373AE0175992F400A53FD8 /* OptionsViewController.m in Sources */,
 				FF373AE617599A8E00A53FD8 /* AFJSONRequestOperation+Constructor.m in Sources */,
+				FF373AE91759A18600A53FD8 /* NSMutableURLRequest+CurlDescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

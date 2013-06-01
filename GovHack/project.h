@@ -20,7 +20,9 @@
 
 #import "Options.h"
 #import "ClientManager.h"
+#import "AFNetworking.h"
 #import "AFJSONRequestOperation+Constructor.h"
+#import "NSMutableURLRequest+CurlDescription.h"
 
 #import <MapKit/MapKit.h>
 //#import <MKMapView.h>

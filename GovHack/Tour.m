@@ -24,6 +24,7 @@
 @synthesize name = _name;
 @synthesize tour_type = _tour_type;
 @synthesize nodes = _nodes;
+@synthesize id = _id;
 
 -(void)setup
 {
@@ -47,6 +48,18 @@
         [self setup];
         _name = name;
         _tour_type = tour_type;
+    }
+    return self;
+}
+
+
+-(id)initFromDictionary:(NSDictionary*)dictionary
+{
+    self = [super init];
+    if (self)
+    {
+        _name = [dictionary objectForKey:@"name"];
+        _id = [dictionary objectForKey:@"id"];
     }
     return self;
 }
