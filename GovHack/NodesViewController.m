@@ -69,10 +69,11 @@
         [_tableview reloadData];
     }];
     self.navigationItem.title = self.tour.name;
-    UIButton* button = [[[NSBundle mainBundle] loadNibNamed:@"MapButton" owner:nil options:nil] lastObject];
-    [button addTarget:self action:@selector(mapButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem* rightButton = [[UIBarButtonItem alloc] initWithCustomView:button];
-    [[self navigationItem] setRightBarButtonItem:rightButton];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleDone target:nil action:nil];
+    rightButton.tintColor = [UIColor colorWithRed:0.3f green:0.3f blue:0.3f alpha:1.0f];
+    rightButton.target = self;
+    rightButton.action = @selector(mapButtonPressed);
+    self.navigationItem.rightBarButtonItem = rightButton;
 }
 
 - (void)didReceiveMemoryWarning

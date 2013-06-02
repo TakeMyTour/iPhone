@@ -16,12 +16,14 @@
 #import "OptionsViewController.h"
 #import "ProgressiveNodesViewController.h"
 #import "NodeHintViewController.h"
+#import "ExploreListViewController.h"
 
 #pragma mark - Views
 
 #import "NodeWebCell.h"
 #import "AddTourCell.h"
 #import "NodeHintCell.h"
+#import "NodeButtonsCell.h"
 
 
 #pragma mark - Data

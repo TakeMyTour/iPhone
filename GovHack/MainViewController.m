@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.3f green:0.3f blue:0.3f alpha:1.0f];
 	// Do any additional setup after loading the view.
 }
 
@@ -44,6 +45,12 @@
 
 #pragma mark - GUI
 
+- (IBAction)exploreButtonPressed:(id)sender
+{
+    ExploreListViewController* ctrl = [[ExploreListViewController alloc] init];
+    [[self navigationController] pushViewController:ctrl animated:YES];
+    [ctrl release];
+}
 
 - (IBAction)myToursButtonPressed:(id)sender
 {

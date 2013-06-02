@@ -45,7 +45,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="123616727">
+						<object class="NSColor" key="IBUIBackgroundColor" id="58859555">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
@@ -65,7 +65,7 @@
 						<string key="NSFrame">{{20, 14}, {130, 30}}</string>
 						<reference key="NSSuperview" ref="895469559"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="490952745"/>
+						<reference key="NSNextKeyView" ref="197287637"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -95,7 +95,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUIButton" id="490952745">
+					<object class="IBUIButton" id="197287637">
 						<reference key="NSNextResponder" ref="895469559"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{170, 14}, {130, 31}}</string>
@@ -109,7 +109,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Whats Near Me?</string>
-						<reference key="IBUIHighlightedTitleColor" ref="123616727"/>
+						<reference key="IBUIHighlightedTitleColor" ref="58859555"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
@@ -136,7 +136,7 @@
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC44ODYxNzg0NjM1IDAuOTA2Mjg5MzkwOSAxAA</bytes>
+					<bytes key="NSRGB">MCAwIDAAA</bytes>
 				</object>
 				<object class="IBUIScreenMetrics" key="IBUISimulatedDestinationMetrics">
 					<string key="IBUISimulatedSizeMetricsClass">IBUIScreenMetrics</string>
@@ -219,7 +219,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">whatsNearMeButtonPressed:</string>
-						<reference key="source" ref="490952745"/>
+						<reference key="source" ref="197287637"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -251,7 +251,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="637191008"/>
 							<reference ref="10127211"/>
-							<reference ref="490952745"/>
+							<reference ref="197287637"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -269,7 +269,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">27</int>
-						<reference key="object" ref="490952745"/>
+						<reference key="object" ref="197287637"/>
 						<reference key="parent" ref="895469559"/>
 					</object>
 				</array>

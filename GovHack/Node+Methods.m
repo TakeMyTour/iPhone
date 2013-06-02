@@ -66,7 +66,10 @@
 +(Node*)newObjectFromDictionary:(NSDictionary*)data
 {
     Node* item = [self newObjectForID:[[data objectForKey:@"id"] intValue]];
-    item.hint_desc = [data objectForKey:@"hint"];
+    if ([data objectForKey:@"hint"] && [data objectForKey:@"hint"]!=[NSNull null])
+    {
+        item.hint_desc = [data objectForKey:@"hint"];
+    }
     if ([[data objectForKey:@"hint_image"] isKindOfClass:[NSString class]])
     {
         item.hint_image = [data objectForKey:@"hint_image"];

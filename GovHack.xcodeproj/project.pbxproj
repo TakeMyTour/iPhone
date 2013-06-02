@@ -19,7 +19,12 @@
 		FF3258A8175ACD6D00C3A261 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3258A7175ACD6D00C3A261 /* Node.m */; };
 		FF3258AA175AD54800C3A261 /* NodeHintCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3258A9175AD54800C3A261 /* NodeHintCell.xib */; };
 		FF3258AD175AD55F00C3A261 /* NodeHintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3258AC175AD55F00C3A261 /* NodeHintCell.m */; };
-		FF373A3C1759720500A53FD8 /* MapButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF373A3B1759720500A53FD8 /* MapButton.xib */; };
+		FF3258AF175AE3C400C3A261 /* NodeButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3258AE175AE3C400C3A261 /* NodeButtonsCell.xib */; };
+		FF3258B2175AE3D400C3A261 /* NodeButtonsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3258B1175AE3D400C3A261 /* NodeButtonsCell.m */; };
+		FF3258B6175AE79900C3A261 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = FF3258B5175AE79900C3A261 /* like.png */; };
+		FF3258B9175AE8FE00C3A261 /* ExploreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3258B8175AE8FD00C3A261 /* ExploreListViewController.m */; };
+		FF3258BB175AE90B00C3A261 /* ExploreListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3258BA175AE90A00C3A261 /* ExploreListView.xib */; };
+		FF3258BD175AED0C00C3A261 /* adelaide.png in Resources */ = {isa = PBXBuildFile; fileRef = FF3258BC175AED0C00C3A261 /* adelaide.png */; };
 		FF373A401759735200A53FD8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF373A3F1759735200A53FD8 /* MapKit.framework */; };
 		FF373A42175978C300A53FD8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF373A41175978C300A53FD8 /* CoreLocation.framework */; };
 		FF373A4417598B0900A53FD8 /* FindToursView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF373A4317598B0900A53FD8 /* FindToursView.xib */; };
@@ -93,7 +98,14 @@
 		FF3258A9175AD54800C3A261 /* NodeHintCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodeHintCell.xib; sourceTree = "<group>"; };
 		FF3258AB175AD55E00C3A261 /* NodeHintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeHintCell.h; sourceTree = "<group>"; };
 		FF3258AC175AD55F00C3A261 /* NodeHintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeHintCell.m; sourceTree = "<group>"; };
-		FF373A3B1759720500A53FD8 /* MapButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapButton.xib; sourceTree = "<group>"; };
+		FF3258AE175AE3C400C3A261 /* NodeButtonsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodeButtonsCell.xib; sourceTree = "<group>"; };
+		FF3258B0175AE3D300C3A261 /* NodeButtonsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeButtonsCell.h; sourceTree = "<group>"; };
+		FF3258B1175AE3D400C3A261 /* NodeButtonsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeButtonsCell.m; sourceTree = "<group>"; };
+		FF3258B5175AE79900C3A261 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
+		FF3258B7175AE8FD00C3A261 /* ExploreListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreListViewController.h; sourceTree = "<group>"; };
+		FF3258B8175AE8FD00C3A261 /* ExploreListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreListViewController.m; sourceTree = "<group>"; };
+		FF3258BA175AE90A00C3A261 /* ExploreListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExploreListView.xib; sourceTree = "<group>"; };
+		FF3258BC175AED0C00C3A261 /* adelaide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adelaide.png; sourceTree = "<group>"; };
 		FF373A3F1759735200A53FD8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FF373A41175978C300A53FD8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FF373A4317598B0900A53FD8 /* FindToursView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindToursView.xib; sourceTree = "<group>"; };
@@ -249,6 +261,8 @@
 		FF97890F1758B50900325B2D /* GovHack */ = {
 			isa = PBXGroup;
 			children = (
+				FF3258BC175AED0C00C3A261 /* adelaide.png */,
+				FF3258B5175AE79900C3A261 /* like.png */,
 				FF373AEA1759B43300A53FD8 /* AddTourCell.h */,
 				FF373AEB1759B43300A53FD8 /* AddTourCell.m */,
 				FF373A4517598B7400A53FD8 /* AddTourCell.xib */,
@@ -268,7 +282,6 @@
 				FF373A4717598BCB00A53FD8 /* MainView.xib */,
 				FF373A4917598D1500A53FD8 /* MainViewController.h */,
 				FF373A4A17598D1600A53FD8 /* MainViewController.m */,
-				FF373A3B1759720500A53FD8 /* MapButton.xib */,
 				FF373AF01759B9EE00A53FD8 /* model */,
 				FF373AED1759B5AE00A53FD8 /* Model.xcdatamodeld */,
 				FF9789371758BF4300325B2D /* Node+Methods.h */,
@@ -309,6 +322,12 @@
 				FF3258A9175AD54800C3A261 /* NodeHintCell.xib */,
 				FF3258AB175AD55E00C3A261 /* NodeHintCell.h */,
 				FF3258AC175AD55F00C3A261 /* NodeHintCell.m */,
+				FF3258AE175AE3C400C3A261 /* NodeButtonsCell.xib */,
+				FF3258B0175AE3D300C3A261 /* NodeButtonsCell.h */,
+				FF3258B1175AE3D400C3A261 /* NodeButtonsCell.m */,
+				FF3258B7175AE8FD00C3A261 /* ExploreListViewController.h */,
+				FF3258B8175AE8FD00C3A261 /* ExploreListViewController.m */,
+				FF3258BA175AE90A00C3A261 /* ExploreListView.xib */,
 			);
 			path = GovHack;
 			sourceTree = "<group>";
@@ -422,7 +441,6 @@
 				FF9789331758BA5800325B2D /* NodesView.xib in Resources */,
 				FF97893E1758C32D00325B2D /* NodeView.xib in Resources */,
 				FF9789401758C75700325B2D /* NodeWebCell.xib in Resources */,
-				FF373A3C1759720500A53FD8 /* MapButton.xib in Resources */,
 				FF373A4417598B0900A53FD8 /* FindToursView.xib in Resources */,
 				FF373A4617598B7400A53FD8 /* AddTourCell.xib in Resources */,
 				FF373A4817598BCB00A53FD8 /* MainView.xib in Resources */,
@@ -430,6 +448,10 @@
 				FF32588E175AC33600C3A261 /* ProgressiveNodesView.xib in Resources */,
 				FF3258A5175ACCA400C3A261 /* NodeHintView.xib in Resources */,
 				FF3258AA175AD54800C3A261 /* NodeHintCell.xib in Resources */,
+				FF3258AF175AE3C400C3A261 /* NodeButtonsCell.xib in Resources */,
+				FF3258B6175AE79900C3A261 /* like.png in Resources */,
+				FF3258BB175AE90B00C3A261 /* ExploreListView.xib in Resources */,
+				FF3258BD175AED0C00C3A261 /* adelaide.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +502,8 @@
 				FF3258A3175ACC9B00C3A261 /* NodeHintViewController.m in Sources */,
 				FF3258A8175ACD6D00C3A261 /* Node.m in Sources */,
 				FF3258AD175AD55F00C3A261 /* NodeHintCell.m in Sources */,
+				FF3258B2175AE3D400C3A261 /* NodeButtonsCell.m in Sources */,
+				FF3258B9175AE8FE00C3A261 /* ExploreListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

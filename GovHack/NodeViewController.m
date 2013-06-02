@@ -47,6 +47,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _tableview.allowsSelection =NO;
 	// Do any additional setup after loading the view.
 }
 
@@ -71,10 +72,12 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     self.navigationItem.title = self.node.name;
-    UIButton* button = [[[NSBundle mainBundle] loadNibNamed:@"MapButton" owner:nil options:nil] lastObject];
-    [button addTarget:self action:@selector(mapButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem* rightButton = [[UIBarButtonItem alloc] initWithCustomView:button];
-    [[self navigationItem] setRightBarButtonItem:rightButton];
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleDone target:nil action:nil];
+    rightButton.tintColor = [UIColor colorWithRed:0.3f green:0.3f blue:0.3f alpha:1.0f];
+    rightButton.target = self;
+    rightButton.action = @selector(mapButtonPressed);
+    self.navigationItem.rightBarButtonItem = rightButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,6 +100,7 @@
 
 typedef enum
 {
+    NodeSectionButtons,
     NodeSectionDescription,
     NodeSectionImages
 } NodeSection;
@@ -104,7 +108,7 @@ typedef enum
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 
 -(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section_
@@ -112,6 +116,11 @@ typedef enum
     NodeSection section = section_;
     switch (section)
     {
+        case NodeSectionButtons:
+        {
+            return 1;
+            break;
+        }
         case NodeSectionDescription:
         {
             if (self.node.description_text!=nil)
@@ -134,6 +143,11 @@ typedef enum
     NodeSection section = indexPath.section;
     switch (section)
     {
+        case NodeSectionButtons:
+        {
+            return 100;
+            break;
+        }
         case NodeSectionDescription:
         {
             return 100;
@@ -158,6 +172,11 @@ typedef enum
     NodeSection section = indexPath.section;
     switch (section)
     {
+        case NodeSectionButtons:
+        {
+            return nil;
+            break;
+        }
         case NodeSectionImages:
         {
             Image* img = [self.node.images objectAtIndex:indexPath.row];
@@ -179,17 +198,36 @@ typedef enum
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NodeWebCell* web_cell = [tableView dequeueReusableCellWithIdentifier:@"NodeWebCell"];
-    if (web_cell==nil)
+    NodeSection section = indexPath.section;
+    switch(section)
     {
-        web_cell = [[[NSBundle mainBundle] loadNibNamed:@"NodeWebCell" owner:nil options:nil] lastObject];
+        case NodeSectionButtons:
+        {
+            NodeButtonsCell* cell = [tableView dequeueReusableCellWithIdentifier:@"NodeButtonsCell"];
+            if (cell==nil)
+            {
+                cell = (NodeButtonsCell*)[[[NSBundle mainBundle] loadNibNamed:@"NodeButtonsCell" owner:nil options:nil] lastObject];
+            }
+            return cell;
+            break;
+        }
+        default:
+        {
+            NodeWebCell* web_cell = [tableView dequeueReusableCellWithIdentifier:@"NodeWebCell"];
+            if (web_cell==nil)
+            {
+                web_cell = [[[NSBundle mainBundle] loadNibNamed:@"NodeWebCell" owner:nil options:nil] lastObject];
+            }
+            web_cell.delegate = self;
+            NSString* html = [self htmlForIndexPath:indexPath];
+            [web_cell setup_html:html];
+            web_cell.userInteractionEnabled = NO;
+            web_cell.indexPath = indexPath;
+            return web_cell;
+            break;
+        }
     }
-    web_cell.delegate = self;
-    NSString* html = [self htmlForIndexPath:indexPath];
-    [web_cell setup_html:html];
-    web_cell.userInteractionEnabled = NO;
-    web_cell.indexPath = indexPath;
-    return web_cell;
+
 }
 
 #pragma mark - foo
