@@ -33,6 +33,7 @@
 #import "Options.h"
 #import "BaseObject.h"
 #import "User.h"
+#import "ExploreItem.h"
 
 #import "Image.h"
 

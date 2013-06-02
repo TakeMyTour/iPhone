@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol NodeButtonsCellDelegate <NSObject>
+@required
+-(void)nearbyButtonPressed;
+
+@end
+
 @interface NodeButtonsCell : UITableViewCell
 
+
+@property (assign, nonatomic) id<NodeButtonsCellDelegate> delegate;
 @end

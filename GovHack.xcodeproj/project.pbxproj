@@ -25,6 +25,7 @@
 		FF3258B9175AE8FE00C3A261 /* ExploreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3258B8175AE8FD00C3A261 /* ExploreListViewController.m */; };
 		FF3258BB175AE90B00C3A261 /* ExploreListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3258BA175AE90A00C3A261 /* ExploreListView.xib */; };
 		FF3258BD175AED0C00C3A261 /* adelaide.png in Resources */ = {isa = PBXBuildFile; fileRef = FF3258BC175AED0C00C3A261 /* adelaide.png */; };
+		FF3258C0175AF05B00C3A261 /* ExploreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3258BF175AF05A00C3A261 /* ExploreItem.m */; };
 		FF373A401759735200A53FD8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF373A3F1759735200A53FD8 /* MapKit.framework */; };
 		FF373A42175978C300A53FD8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF373A41175978C300A53FD8 /* CoreLocation.framework */; };
 		FF373A4417598B0900A53FD8 /* FindToursView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF373A4317598B0900A53FD8 /* FindToursView.xib */; };
@@ -106,6 +107,8 @@
 		FF3258B8175AE8FD00C3A261 /* ExploreListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreListViewController.m; sourceTree = "<group>"; };
 		FF3258BA175AE90A00C3A261 /* ExploreListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExploreListView.xib; sourceTree = "<group>"; };
 		FF3258BC175AED0C00C3A261 /* adelaide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adelaide.png; sourceTree = "<group>"; };
+		FF3258BE175AF05900C3A261 /* ExploreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreItem.h; sourceTree = "<group>"; };
+		FF3258BF175AF05A00C3A261 /* ExploreItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreItem.m; sourceTree = "<group>"; };
 		FF373A3F1759735200A53FD8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FF373A41175978C300A53FD8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FF373A4317598B0900A53FD8 /* FindToursView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindToursView.xib; sourceTree = "<group>"; };
@@ -328,6 +331,8 @@
 				FF3258B7175AE8FD00C3A261 /* ExploreListViewController.h */,
 				FF3258B8175AE8FD00C3A261 /* ExploreListViewController.m */,
 				FF3258BA175AE90A00C3A261 /* ExploreListView.xib */,
+				FF3258BE175AF05900C3A261 /* ExploreItem.h */,
+				FF3258BF175AF05A00C3A261 /* ExploreItem.m */,
 			);
 			path = GovHack;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 				FF3258AD175AD55F00C3A261 /* NodeHintCell.m in Sources */,
 				FF3258B2175AE3D400C3A261 /* NodeButtonsCell.m in Sources */,
 				FF3258B9175AE8FE00C3A261 /* ExploreListViewController.m in Sources */,
+				FF3258C0175AF05B00C3A261 /* ExploreItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

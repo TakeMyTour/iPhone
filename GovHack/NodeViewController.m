@@ -86,6 +86,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - NodeButtonsCellDelegate
+
+-(void)nearbyButtonPressed
+{
+    ExploreListViewController* ctrl = [[ExploreListViewController alloc] init];
+    [[self navigationController] pushViewController:ctrl animated:YES];
+    [ctrl release];
+}
+
 #pragma mark - NodeCallDelegate
 
 -(void)reloadIndexPath:(NSIndexPath*)indexPath
@@ -208,6 +218,7 @@ typedef enum
             {
                 cell = (NodeButtonsCell*)[[[NSBundle mainBundle] loadNibNamed:@"NodeButtonsCell" owner:nil options:nil] lastObject];
             }
+            cell.delegate = self;
             return cell;
             break;
         }

@@ -16,9 +16,13 @@
     IBOutlet UITableView *_tableview;
 }
 
+@property (retain, nonatomic) NSMutableArray* items;
+
 @end
 
 @implementation ExploreListViewController
+
+@synthesize items = _items;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -57,6 +61,18 @@
     AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success_:^(AFJSONRequestOperation*operation) {
       // NSArray* tours = operation.responseJSON;
         
+        NSMutableArray* results = [[NSMutableArray alloc] init];
+        for (NSDictionary* item_data in operation.responseJSON)
+        {
+            ExploreItem* item = [[ExploreItem alloc] init];
+            item.name = [item_data objectForKey:@"name"];
+            [results addObject:item];
+            [item release];
+        }
+        self.items = results;
+        [_tableview reloadData];
+        [results release];
+        
     } failure_:^(AFJSONRequestOperation*operation) {
         NSString* response = [operation responseJSON] ? [operation responseJSON] : [operation responseString];
         NSLog(@"Failure: %@", response);
@@ -89,12 +105,21 @@
 
 -(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return self.items.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [[UITableViewCell alloc] init];
+    
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell==nil)
+    {
+        cell = [[UITableViewCell alloc] init];
+    }
+    
+    ExploreItem* item = [self.items objectAtIndex:indexPath.row];
+    cell.textLabel.text = item.name;
+    return cell;
 }
 
 #pragma mark -

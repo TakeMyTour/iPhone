@@ -10,7 +10,9 @@
 #import <MapKit/MapKit.h>
 #import "Node.h"
 #import "NodeWebCell.h"
-@interface NodeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate, NodeWebCellDelegate>
+#import "NodeButtonsCell.h"
+
+@interface NodeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate, NodeWebCellDelegate, NodeButtonsCellDelegate>
 
 -(id)init:(Node*)node;
 
