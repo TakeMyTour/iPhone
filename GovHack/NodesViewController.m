@@ -119,8 +119,6 @@
     }
     Node* node = [self.tour.nodes objectAtIndex:indexPath.row];
     cell.textLabel.text = node.name;
-    
-    
     return cell;
 }
 

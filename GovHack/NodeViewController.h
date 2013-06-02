@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "Node.h"
-@interface NodeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate>
+#import "NodeWebCell.h"
+@interface NodeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate, NodeWebCellDelegate>
 
 -(id)init:(Node*)node;
 

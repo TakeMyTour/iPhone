@@ -2,7 +2,7 @@
 //  Node.h
 //  GovHack
 //
-//  Created by Myles on 1/06/13.
+//  Created by Myles on 2/06/13.
 //  Copyright (c) 2013 Myles. All rights reserved.
 //
 
@@ -19,15 +19,21 @@
 @property (nonatomic, retain) NSNumber * gps_latitude;
 @property (nonatomic, retain) NSNumber * gps_longitude;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSNumber * hasBeenSeen;
+@property (nonatomic, retain) NSOrderedSet *images;
 @property (nonatomic, retain) Tour *nodes_inverse;
-@property (nonatomic, retain) NSSet *images;
 @end
 
 @interface Node (CoreDataGeneratedAccessors)
 
+- (void)insertObject:(Image *)value inImagesAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromImagesAtIndex:(NSUInteger)idx;
+- (void)insertImages:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeImagesAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInImagesAtIndex:(NSUInteger)idx withObject:(Image *)value;
+- (void)replaceImagesAtIndexes:(NSIndexSet *)indexes withImages:(NSArray *)values;
 - (void)addImagesObject:(Image *)value;
 - (void)removeImagesObject:(Image *)value;
-- (void)addImages:(NSSet *)values;
-- (void)removeImages:(NSSet *)values;
-
+- (void)addImages:(NSOrderedSet *)values;
+- (void)removeImages:(NSOrderedSet *)values;
 @end

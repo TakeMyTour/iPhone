@@ -120,6 +120,13 @@
                 [[self navigationController] pushViewController:ctrl animated:YES];
                 [ctrl release];
             }
+            else if (selected.tour_type.intValue==TourTypeProgressive)
+            {
+                // 
+                ProgressiveNodesViewController* ctrl = [[ProgressiveNodesViewController alloc] init:selected];
+                [[self navigationController] pushViewController:ctrl animated:YES];
+                [ctrl release];
+            }
         }
     }
     

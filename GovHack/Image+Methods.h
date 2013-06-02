@@ -9,4 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Image.h"
 @interface Image (Methods)
+
++(Image*)createLocal;
+
 @end

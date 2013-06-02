@@ -14,6 +14,7 @@
 #import "MainViewController.h"
 #import "FindToursViewController.h"
 #import "OptionsViewController.h"
+#import "ProgressiveNodesViewController.h"
 
 #pragma mark - Views
 

@@ -90,6 +90,50 @@
     [params release];
     [operation start];
 }
+- (IBAction)whatsNearMeButtonPressed:(id)sender
+{
+    [self search_locally];
+}
+
+-(void)search_locally
+{
+    // TODO - lat/long is hard-coded
+    double lat_ = -34.9;
+    double long_ = 138.6;
+    double dist_ = 20;
+    
+    // whats near me?
+    NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
+    [params setValue:[NSString stringWithFormat:@"%f", lat_] forKey:@"lat"];
+    [params setValue:[NSString stringWithFormat:@"%f", long_] forKey:@"lon"];
+    [params setValue:[NSString stringWithFormat:@"%f", dist_] forKey:@"dist"];
+    //  http://unleashed.oeg.com.au/tours/search?name=adelaide
+    NSString* path = @"/tours/search";
+    
+    NSMutableURLRequest* request = [ClientManager requestWithMethod:@"GET" path:path parameters:params];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success_:^(AFJSONRequestOperation*operation) {
+        NSArray* tours = operation.responseJSON;
+        
+        NSMutableArray* current_tours = [[NSMutableArray alloc] initWithCapacity:tours.count];
+        
+        for (NSDictionary* tour_data in tours)
+        {
+            Tour* tour = [Tour newObjectFromDictionary:tour_data];
+            [current_tours addObject:tour];
+        }
+        [self setCurrentTours:current_tours];
+        
+    } failure_:^(AFJSONRequestOperation*operation) {
+        NSString* response = [operation responseJSON] ? [operation responseJSON] : [operation responseString];
+        NSLog(@"Failure: %@", response);
+        NSLog(@"error: %@", [[operation error] description]);
+    }];
+    
+    [params release];
+    [operation start];
+}
 
 -(void)search_all
 {

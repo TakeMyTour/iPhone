@@ -76,7 +76,7 @@
     item.name = [data objectForKey:@"name"];
     item.address = [data objectForKey:@"address"];
     item.description_text = [data objectForKey:@"desc"];
-    item.images = [NSSet setWithArray:[self imagesFromImageList:[data objectForKey:@"images"]]];
+    item.images = [NSOrderedSet orderedSetWithArray:[self imagesFromImageList:[data objectForKey:@"images"]]];
     return item;
 }
 
