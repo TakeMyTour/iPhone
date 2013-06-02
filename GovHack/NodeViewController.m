@@ -161,7 +161,6 @@ typedef enum
         case NodeSectionImages:
         {
             Image* img = [self.node.images objectAtIndex:indexPath.row];
-            
             NSString* imageString = [NSString stringWithFormat:@"<img height=\"120\" src=\"%@\" width=\"120\" />", img.url];
             NSString* img_desc = [NSString stringWithFormat:@"<p>%@</p>", img.desc];
             html = [NSString stringWithFormat:@"<html><body style='background-color: transparent; width: 320px; margin: 0; padding: 0;'><div id='ContentDiv' style=\"width:200px; margin:auto\">%@</div>%@</body></html>", imageString, img_desc];
@@ -191,53 +190,6 @@ typedef enum
     web_cell.userInteractionEnabled = NO;
     web_cell.indexPath = indexPath;
     return web_cell;
-    
-    
-#if 0
-    NodeSection section = indexPath.section;
-    switch (section)
-    {
-        case NodeSectionImages:
-        {
-            //return [[UITableViewCell alloc] init];
-            NodeWebCell* web_cell = [tableView dequeueReusableCellWithIdentifier:@"NodeWebCell"];
-            if (web_cell==nil)
-            {
-                web_cell = [[[NSBundle mainBundle] loadNibNamed:@"NodeWebCell" owner:nil options:nil] lastObject];
-            }
-            Image* img = [self.node.images objectAtIndex:indexPath.row];
-            
-            NSString* imageString = [NSString stringWithFormat:@"<img height=\"120\" src=\"%@\" width=\"120\" />", img.url];
-            NSString* img_desc = [NSString stringWithFormat:@"<p>%@</p>", img.desc];
-            NSString* html = [NSString stringWithFormat:@"<html><body style='background-color: transparent; width: 320px; height: 200px; margin: 0; padding: 0;'><div id='ContentDiv' style=\"width:200px; margin:auto\">%@</div>%@</body></html>", imageString, img_desc];
-            [web_cell setup_html:html];
-            cell = web_cell;
-            cell.userInteractionEnabled = NO;
-            break;
-        }
-        case NodeSectionDescription:
-        {
-            NodeWebCell* web_cell = [tableView dequeueReusableCellWithIdentifier:@"NodeWebCell"];
-            if (web_cell==nil)
-            {
-                web_cell = [[[NSBundle mainBundle] loadNibNamed:@"NodeWebCell" owner:nil options:nil] lastObject];
-            }
-            [web_cell setup_html:self.node.description_text];
-            cell = web_cell;
-            cell.userInteractionEnabled = NO;
-            break;
-        }
-        default:
-        {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-            if (cell==nil)
-            {
-                cell = [[UITableViewCell alloc] init];
-            }
-            cell.backgroundColor = [UIColor colorWithRed:0.4f green:0.4f blue:0.0f alpha:1.0f];
-        }
-    }
-#endif
 }
 
 #pragma mark - foo

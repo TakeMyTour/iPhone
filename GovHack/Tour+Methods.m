@@ -129,4 +129,26 @@
     }
 }
 
+
+-(void)refreshData:(void(^)())success
+{
+    NSString* path = [NSString stringWithFormat:@"/tour/%d", [self.id intValue]];
+    NSDictionary* params = [[NSDictionary alloc] init];
+    NSMutableURLRequest* request = [ClientManager requestWithMethod:@"GET" path:path parameters:nil];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success_:^(AFJSONRequestOperation*operation) {
+        [self setupFromDictionary:operation.responseJSON];
+        success();
+    } failure_:^(AFJSONRequestOperation*operation) {
+        NSString* response = [operation responseJSON] ? [operation responseJSON] : [operation responseString];
+        NSLog(@"Failure: %@", response);
+        NSLog(@"error: %@", [[operation error] description]);
+    }];
+    
+    [params release];
+    [operation start];
+}
+
+
 @end

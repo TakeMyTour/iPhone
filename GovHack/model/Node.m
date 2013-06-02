@@ -19,6 +19,8 @@
 @dynamic gps_longitude;
 @dynamic name;
 @dynamic hasBeenSeen;
+@dynamic hint_image;
+@dynamic hint_desc;
 @dynamic images;
 @dynamic nodes_inverse;
 

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NodeHintCell.h"
 #import "Tour.h"
-@interface ProgressiveNodesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface ProgressiveNodesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, NodeHintCellDelegate>
 
 
 -(id)init:(Tour*)tour;

@@ -12,14 +12,19 @@
 @interface Node (Methods)
 
 +(Node*)newObjectForID:(int)idValue;
+
 +(Node*)newObjectFromDictionary:(NSDictionary*)data;
+
 +(Node*)createLocal;
 
 -(void)setup;
+
 -(id)init;
 
 -(id)init:(NSString*)name;
 
 -(void)addToMap:(MKMapView*)map;
+
+-(void)refreshData:(void(^)())success;
 
 @end

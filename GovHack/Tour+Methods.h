@@ -31,4 +31,6 @@ typedef enum
 -(id)initFromDictionary:(NSDictionary*)dictionary;
 -(void)addToMap:(MKMapView*)map;
 
+-(void)refreshData:(void(^)())success;
+
 @end

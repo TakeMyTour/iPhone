@@ -55,6 +55,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self.tour refreshData:^{
+        [_tableview reloadData];
+    }];
+}
+
+#pragma mark - NodeHintCellDelegate
+
+-(void)reloadIndexPath:(NSIndexPath*)indexPath
+{
+    [_tableview reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 #pragma mark - tableview
 
 -(int)numberOfSectionsInTableView:(UITableView *)tableView
@@ -69,33 +83,51 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    NodeHintCell* cell = [tableView dequeueReusableCellWithIdentifier:@"NodeHintCell"];
     if (cell==nil)
     {
-        cell = [[UITableViewCell alloc] init];
+        cell = (NodeHintCell*)[[[NSBundle mainBundle] loadNibNamed:@"NodeHintCell" owner:nil options:nil] lastObject];
     }
+    cell.delegate = self;
     Node* node = [self.tour.nodes objectAtIndex:indexPath.row];
     if (node.hasBeenSeen)
     {
-        cell.textLabel.text = node.name;
+        cell.label.text = node.name;
+        cell.button.hidden = YES;
     }
     else
     {
-        cell.textLabel.text = @"Unknown - Show Hint";
+        cell.label.text = @"Unknown - Show Hint";
+        cell.button.hidden = NO;
     }
+    cell.node = node;
+    cell.indexPath = indexPath;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Node* node = [self.tour.nodes objectAtIndex:indexPath.row];
-    //if (node.)
+    if (node.hasBeenSeen)
+    {
+        NodeViewController* ctrl = [[NodeViewController alloc] init:node];
+        [[self navigationController] pushViewController:ctrl animated:YES];
+        [ctrl release];
+    }
+    else
+    {
+        // show hint controller!!!
+        NodeHintViewController* ctrl = [[NodeHintViewController alloc] init:node];
+        [[self navigationController] pushViewController:ctrl animated:YES];
+        [ctrl release];
+    }
 }
 
 
 #pragma mark -
 
-- (void)dealloc {
+- (void)dealloc
+{
     [_tableview release];
     [super dealloc];
 }

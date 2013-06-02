@@ -20,6 +20,8 @@
 @property (nonatomic, retain) NSNumber * gps_longitude;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * hasBeenSeen;
+@property (nonatomic, retain) NSString * hint_image;
+@property (nonatomic, retain) NSString * hint_desc;
 @property (nonatomic, retain) NSOrderedSet *images;
 @property (nonatomic, retain) Tour *nodes_inverse;
 @end

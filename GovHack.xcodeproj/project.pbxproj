@@ -10,11 +10,15 @@
 		FF32588C175AC32900C3A261 /* ProgressiveNodesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32588B175AC32900C3A261 /* ProgressiveNodesViewController.m */; };
 		FF32588E175AC33600C3A261 /* ProgressiveNodesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF32588D175AC33600C3A261 /* ProgressiveNodesView.xib */; };
 		FF325891175AC50800C3A261 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FF325890175AC50800C3A261 /* User.m */; };
-		FF325894175AC50900C3A261 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = FF325893175AC50900C3A261 /* Node.m */; };
 		FF325897175AC50900C3A261 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = FF325896175AC50900C3A261 /* Image.m */; };
 		FF32589A175AC50900C3A261 /* Options.m in Sources */ = {isa = PBXBuildFile; fileRef = FF325899175AC50900C3A261 /* Options.m */; };
 		FF32589D175AC50900C3A261 /* Tour.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32589C175AC50900C3A261 /* Tour.m */; };
 		FF3258A0175AC50900C3A261 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FF32589F175AC50900C3A261 /* BaseObject.m */; };
+		FF3258A3175ACC9B00C3A261 /* NodeHintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3258A2175ACC9B00C3A261 /* NodeHintViewController.m */; };
+		FF3258A5175ACCA400C3A261 /* NodeHintView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3258A4175ACCA400C3A261 /* NodeHintView.xib */; };
+		FF3258A8175ACD6D00C3A261 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3258A7175ACD6D00C3A261 /* Node.m */; };
+		FF3258AA175AD54800C3A261 /* NodeHintCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3258A9175AD54800C3A261 /* NodeHintCell.xib */; };
+		FF3258AD175AD55F00C3A261 /* NodeHintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3258AC175AD55F00C3A261 /* NodeHintCell.m */; };
 		FF373A3C1759720500A53FD8 /* MapButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF373A3B1759720500A53FD8 /* MapButton.xib */; };
 		FF373A401759735200A53FD8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF373A3F1759735200A53FD8 /* MapKit.framework */; };
 		FF373A42175978C300A53FD8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF373A41175978C300A53FD8 /* CoreLocation.framework */; };
@@ -73,8 +77,6 @@
 		FF32588D175AC33600C3A261 /* ProgressiveNodesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressiveNodesView.xib; sourceTree = "<group>"; };
 		FF32588F175AC50800C3A261 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		FF325890175AC50800C3A261 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		FF325892175AC50800C3A261 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
-		FF325893175AC50900C3A261 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 		FF325895175AC50900C3A261 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
 		FF325896175AC50900C3A261 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
 		FF325898175AC50900C3A261 /* Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Options.h; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 		FF32589C175AC50900C3A261 /* Tour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tour.m; sourceTree = "<group>"; };
 		FF32589E175AC50900C3A261 /* BaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
 		FF32589F175AC50900C3A261 /* BaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
+		FF3258A1175ACC9A00C3A261 /* NodeHintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeHintViewController.h; sourceTree = "<group>"; };
+		FF3258A2175ACC9B00C3A261 /* NodeHintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeHintViewController.m; sourceTree = "<group>"; };
+		FF3258A4175ACCA400C3A261 /* NodeHintView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodeHintView.xib; sourceTree = "<group>"; };
+		FF3258A6175ACD6D00C3A261 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		FF3258A7175ACD6D00C3A261 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		FF3258A9175AD54800C3A261 /* NodeHintCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodeHintCell.xib; sourceTree = "<group>"; };
+		FF3258AB175AD55E00C3A261 /* NodeHintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeHintCell.h; sourceTree = "<group>"; };
+		FF3258AC175AD55F00C3A261 /* NodeHintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeHintCell.m; sourceTree = "<group>"; };
 		FF373A3B1759720500A53FD8 /* MapButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapButton.xib; sourceTree = "<group>"; };
 		FF373A3F1759735200A53FD8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FF373A41175978C300A53FD8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -191,8 +201,6 @@
 			children = (
 				FF32588F175AC50800C3A261 /* User.h */,
 				FF325890175AC50800C3A261 /* User.m */,
-				FF325892175AC50800C3A261 /* Node.h */,
-				FF325893175AC50900C3A261 /* Node.m */,
 				FF325895175AC50900C3A261 /* Image.h */,
 				FF325896175AC50900C3A261 /* Image.m */,
 				FF325898175AC50900C3A261 /* Options.h */,
@@ -201,6 +209,8 @@
 				FF32589C175AC50900C3A261 /* Tour.m */,
 				FF32589E175AC50900C3A261 /* BaseObject.h */,
 				FF32589F175AC50900C3A261 /* BaseObject.m */,
+				FF3258A6175ACD6D00C3A261 /* Node.h */,
+				FF3258A7175ACD6D00C3A261 /* Node.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -293,6 +303,12 @@
 				FF32588A175AC32900C3A261 /* ProgressiveNodesViewController.h */,
 				FF32588B175AC32900C3A261 /* ProgressiveNodesViewController.m */,
 				FF32588D175AC33600C3A261 /* ProgressiveNodesView.xib */,
+				FF3258A1175ACC9A00C3A261 /* NodeHintViewController.h */,
+				FF3258A2175ACC9B00C3A261 /* NodeHintViewController.m */,
+				FF3258A4175ACCA400C3A261 /* NodeHintView.xib */,
+				FF3258A9175AD54800C3A261 /* NodeHintCell.xib */,
+				FF3258AB175AD55E00C3A261 /* NodeHintCell.h */,
+				FF3258AC175AD55F00C3A261 /* NodeHintCell.m */,
 			);
 			path = GovHack;
 			sourceTree = "<group>";
@@ -412,6 +428,8 @@
 				FF373A4817598BCB00A53FD8 /* MainView.xib in Resources */,
 				FF373ADD1759919F00A53FD8 /* OptionsView.xib in Resources */,
 				FF32588E175AC33600C3A261 /* ProgressiveNodesView.xib in Resources */,
+				FF3258A5175ACCA400C3A261 /* NodeHintView.xib in Resources */,
+				FF3258AA175AD54800C3A261 /* NodeHintCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,11 +473,13 @@
 				FFDCF3461759FE5200FC8B97 /* Image+Methods.m in Sources */,
 				FF32588C175AC32900C3A261 /* ProgressiveNodesViewController.m in Sources */,
 				FF325891175AC50800C3A261 /* User.m in Sources */,
-				FF325894175AC50900C3A261 /* Node.m in Sources */,
 				FF325897175AC50900C3A261 /* Image.m in Sources */,
 				FF32589A175AC50900C3A261 /* Options.m in Sources */,
 				FF32589D175AC50900C3A261 /* Tour.m in Sources */,
 				FF3258A0175AC50900C3A261 /* BaseObject.m in Sources */,
+				FF3258A3175ACC9B00C3A261 /* NodeHintViewController.m in Sources */,
+				FF3258A8175ACD6D00C3A261 /* Node.m in Sources */,
+				FF3258AD175AD55F00C3A261 /* NodeHintCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

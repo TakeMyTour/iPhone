@@ -69,7 +69,6 @@
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success_:^(AFJSONRequestOperation*operation) {
-        // NSLog(@"Success! %@", operation.responseJSON);
         NSArray* tours = operation.responseJSON;
         
         NSMutableArray* current_tours = [[NSMutableArray alloc] initWithCapacity:tours.count];
@@ -143,7 +142,6 @@
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     AFJSONRequestOperation* operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success_:^(AFJSONRequestOperation*operation) {
-        // NSLog(@"Success! %@", operation.responseJSON);
         NSArray* tours = operation.responseJSON;
         
         NSMutableArray* current_tours = [[NSMutableArray alloc] initWithCapacity:tours.count];
