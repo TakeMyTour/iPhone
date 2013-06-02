@@ -86,6 +86,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     // request whats nearby!!!!!!!
+    [self navigationItem].title = @"Explore!";
     [self search];
 }
 

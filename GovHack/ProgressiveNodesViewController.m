@@ -57,6 +57,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    self.navigationItem.title = self.tour.name;
     [self.tour refreshData:^{
         [_tableview reloadData];
     }];

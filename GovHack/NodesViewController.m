@@ -65,10 +65,10 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    self.navigationItem.title = self.tour.name;
     [self.tour refreshData:^(){
         [_tableview reloadData];
     }];
-    self.navigationItem.title = self.tour.name;
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleDone target:nil action:nil];
     rightButton.tintColor = [UIColor colorWithRed:0.3f green:0.3f blue:0.3f alpha:1.0f];
     rightButton.target = self;

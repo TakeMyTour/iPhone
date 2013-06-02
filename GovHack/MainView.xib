@@ -38,8 +38,8 @@
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIButton" id="111596756">
 						<reference key="NSNextResponder" ref="439128280"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{100, 315}, {120, 44}}</string>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{100, 285}, {120, 44}}</string>
 						<reference key="NSSuperview" ref="439128280"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1053248068"/>
@@ -74,8 +74,8 @@
 					</object>
 					<object class="IBUIButton" id="1053248068">
 						<reference key="NSNextResponder" ref="439128280"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{100, 366}, {120, 44}}</string>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{100, 336}, {120, 44}}</string>
 						<reference key="NSSuperview" ref="439128280"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="19467420"/>
@@ -97,11 +97,11 @@
 					</object>
 					<object class="IBUIImageView" id="187570105">
 						<reference key="NSNextResponder" ref="439128280"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{55, 20}, {210, 220}}</string>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{55, 6}, {210, 220}}</string>
 						<reference key="NSSuperview" ref="439128280"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="895877029"/>
+						<reference key="NSNextKeyView" ref="808159870"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -116,8 +116,8 @@
 					</object>
 					<object class="IBUIButton" id="19467420">
 						<reference key="NSNextResponder" ref="439128280"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{100, 417}, {120, 44}}</string>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{100, 387}, {120, 44}}</string>
 						<reference key="NSSuperview" ref="439128280"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -137,10 +137,10 @@
 						<reference key="IBUIFontDescription" ref="286970540"/>
 						<reference key="IBUIFont" ref="68187511"/>
 					</object>
-					<object class="IBUIButton" id="895877029">
+					<object class="IBUIButton" id="808159870">
 						<reference key="NSNextResponder" ref="439128280"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{100, 264}, {120, 44}}</string>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{100, 234}, {120, 44}}</string>
 						<reference key="NSSuperview" ref="439128280"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="111596756"/>
@@ -161,7 +161,7 @@
 						<reference key="IBUIFont" ref="68187511"/>
 					</object>
 				</array>
-				<string key="NSFrameSize">{320, 480}</string>
+				<string key="NSFrameSize">{320, 436}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="187570105"/>
@@ -170,22 +170,9 @@
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MCAwIDAAA</bytes>
 				</object>
-				<object class="IBUIScreenMetrics" key="IBUISimulatedDestinationMetrics">
-					<string key="IBUISimulatedSizeMetricsClass">IBUIScreenMetrics</string>
-					<object class="NSMutableDictionary" key="IBUINormalizedOrientationToSizeMap">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<array key="dict.sortedKeys">
-							<integer value="1"/>
-							<integer value="3"/>
-						</array>
-						<array key="dict.values">
-							<string>{320, 480}</string>
-							<string>{480, 320}</string>
-						</array>
-					</object>
-					<string key="IBUITargetRuntime">IBCocoaTouchFramework</string>
-					<string key="IBUIDisplayName">Retina 3.5 Full Screen</string>
-					<int key="IBUIType">0</int>
+				<object class="IBUISimulatedSizeMetrics" key="IBUISimulatedDestinationMetrics">
+					<string key="IBUISimulatedSizeMetricsClass">IBUISimulatedFreeformSizeMetricsSentinel</string>
+					<string key="IBUIDisplayName">Freeform</string>
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
@@ -230,7 +217,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">exploreButtonPressed:</string>
-						<reference key="source" ref="895877029"/>
+						<reference key="source" ref="808159870"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -260,11 +247,11 @@
 						<int key="objectID">3</int>
 						<reference key="object" ref="439128280"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="19467420"/>
-							<reference ref="1053248068"/>
 							<reference ref="111596756"/>
-							<reference ref="895877029"/>
+							<reference ref="1053248068"/>
 							<reference ref="187570105"/>
+							<reference ref="19467420"/>
+							<reference ref="808159870"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -291,7 +278,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">28</int>
-						<reference key="object" ref="895877029"/>
+						<reference key="object" ref="808159870"/>
 						<reference key="parent" ref="439128280"/>
 					</object>
 				</array>
@@ -319,6 +306,30 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">MainViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="exploreButtonPressed:">id</string>
+						<string key="findToursButtonPressed:">id</string>
+						<string key="myToursButtonPressed:">id</string>
+						<string key="optionsButtonPressed:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="exploreButtonPressed:">
+							<string key="name">exploreButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="findToursButtonPressed:">
+							<string key="name">findToursButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="myToursButtonPressed:">
+							<string key="name">myToursButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="optionsButtonPressed:">
+							<string key="name">optionsButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/MainViewController.h</string>
